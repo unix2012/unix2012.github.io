@@ -1,1 +1,11 @@
-theme: jekyll-theme-cayman
+title: Researcher
+url: "http://ankitsultana.me"
+baseurl: "/researcher"
+
+markdown: kramdown
+
+tracking_id: #
+
+sass:
+    style: compressed
+    sass_dir: _sass
