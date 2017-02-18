@@ -1,7 +1,3 @@
-这是在GitHub弄的主页。
-
-半通不通，以致于不伦不类。
-
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
