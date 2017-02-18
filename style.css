@@ -1,0 +1,109 @@
+html {color: #000000;min-height: 100%;background-color: #E9E0D3;padding: 0;margin: 0;}
+body {max-width: 1200px;margin:2em 20em 2em 20em;font-family:"Trebuchet MS", Helvetica, SimSun, sans-serif;font-size:10.5pt;color:#c00000;line-height:160%}
+a:link {text-decoration:none}
+a:visited {text-decoration:none}
+a:hover {text-decoration:underline;color:#ff0000}
+input:focus, a:focus, button:focus {box-shadow: 0 0 3px #cb0;}
+
+h1, h2, h3, h4, h5, h6 {font-family: "Microsoft Yahei", sans-serif;margin: 0;padding: 0.15em 0;}
+h1 {font-size: 1.7em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 0;}
+h2 {font-size: 1.52em;color: #800040;margin-top: 1em;}
+h3 {font-size: 1.22em;color: #0080ff;margin-top: 0.9em;}
+/*h3 {font-size: 1.22em;color: #0080ff;width: 80%;margin-top: 0.9em;margin-bottom: 0.4em;}*/
+h4 {font-size: 1.15em;color: #008040;margin-top: 0.8em;}
+h5 {font-size: 1.05em;color: #808000;}
+h6 {font-size: 1.0em;color: #000000;}
+
+p, ul, li, table {margin: 0;padding: 0;}
+p, pre, blockquote, table, ul, ol, dl {margin: 0.5em 0 1em;}
+ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
+li {margin: 0.3em auto;}
+ol, ul {margin-left: 1em;padding-left: 0.5em;}
+dt {font-weight: bold;}
+img {border: none;}
+
+table {border-collapse: collapse;}
+th, td {border: 1px solid #ccc;padding: 0.3em 0.5em;background-color: #f0f0f0;}
+th {background-color: #f0f0f0;}
+hr {border: none;border-top: 1px solid #ff0000;width: 100%;margin: 20px 0;}
+del {text-decoration: line-through;opacity: 0.6;color: #800080;}
+strong, b {font-weight: 600;color: #000000;}
+em, i {font-family: Candara, "Microsoft Yahei", sans-serif;font-style: italic;}
+textarea {background: transparent;color: #fff;resize: none;}
+
+blockquote, pre {padding: 0.8em;background: #d5d5d5;border: 1px solid #614;position: relative;z-index: 2;font-family: 'Lucida Console', 'Courier New', Courier, monospace;}
+code {padding: 2px 4px;color: #800000;font-family: 'Lucida Console', 'Courier New', Courier, monospace;}
+iframe {position: relative;}
+
+.syntaxhighlighter table {width: 100%;}
+.syntaxhighlighter td.gutter {width: 1em;}
+.syntaxhighlighter .gutter .line {padding-right: 0.3em;}
+
+.tocWrap {position: fixed; width: 200px;z-index: 100;top: 16%;right: 2.8%;display: none;}
+.toc {display: none;overflow: auto;overflow-x: hidden;border: 1px solid #F0C81E;border-radius: 0 0 1px 1px;color: #999;background: #0C1F2C;    padding: 12px;box-shadow: 0 1px 8px #000;}
+.tocWrap .toggler {text-align: center;font-size: 10.5pt;background: #F0C81E;border-radius: 2px 2px 0 0;color: #122;position: relative;z-index: 101;cursor: pointer;}
+.toc ul {margin: 0;}
+.toc li {color: #eff;list-style-type: none;}
+.toc a {color: #eff;}
+.todo {font-weight: bold;background-color: #f0ece8;color: #a03020;}
+.justleft {text-align: left;}
+.justright {text-align: right;}
+.justcenter {text-align: center;}
+.center {margin-left: auto;margin-right: auto;}
+
+
+
+/* classes for items of todo lists */
+/*
+.done0:before {content: "\2592\2592\2592\2592"; color: SkyBlue;}
+.done1:before {content: "\2588\2592\2592\2592"; color: SkyBlue;}
+.done2:before {content: "\2588\2588\2592\2592"; color: SkyBlue;}
+.done3:before {content: "\2588\2588\2588\2592"; color: SkyBlue;}
+.done4:before {content: "\2588\2588\2588\2588"; color: SkyBlue;}
+*/
+/* comment the next four or five lines out *
+ * if you do not want color-coded todo lists */
+.done0 {color: #c00000;}
+.done1 {color: #c08000;}
+.done2 {color: #80a000;}
+.done3 {color: #00c000;}
+.done4 {color: #7f7f7f;}
+
+
+/* classes for items of todo lists */
+.done0 {
+    background-image: url(00.png);
+    background-repeat: no-repeat;
+    background-position: 0 .2em;
+    margin-left: 1em;
+    padding-left: 2em;
+}
+.done1 {
+    background-image: url(01.png);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    margin-left: 1em;
+    padding-left: 2em;
+}
+.done2 {
+    background-image: url(05.png);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    margin-left: 1em;
+    padding-left: 2em;
+}
+.done3 {
+    background-image: url(10.png);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    margin-left: 1em;
+    padding-left: 2em;
+}
+.done4 {
+    background-image: url(10.png);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    margin-left: 1em;
+    padding-left: 2em;
+    text-decoration: line-through;
+}
