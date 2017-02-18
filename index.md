@@ -1,6 +1,5 @@
-## 哥 舒
-
-You can use the [editor on GitHub](https://github.com/unix2012/unix2012.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+这是在GitHub弄的主页。
+半通不通，以致于不伦不类。
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
