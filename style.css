@@ -1,19 +1,20 @@
 html {color: #000000;min-height: 100%;background-color: #E9E0D3;padding: 0;margin: 0;}
-body {max-width: 1200px;margin:2em 20em 2em 20em;font-family:"Trebuchet MS", Helvetica, SimSun, sans-serif;font-size:10.5pt;color:#c00000;line-height:160%}
+body {max-width: 1200px;margin:2em 20em 2em 20em;font-family:font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, Microsoft YaHei,Verdana, Aril, sans-serif;font-size:11pt;color:#c00000;line-height:160%}
 a:link {text-decoration:none}
 a:visited {text-decoration:none}
 a:hover {text-decoration:underline;color:#ff0000}
 input:focus, a:focus, button:focus {box-shadow: 0 0 3px #cb0;}
 
-h1, h2, h3, h4, h5, h6 {font-family: "Microsoft Yahei", sans-serif;margin: 0;padding: 0.15em 0;}
-h1 {font-size: 1.7em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 0;}
-h2 {font-size: 1.52em;color: #800040;margin-top: 1em;}
-h3 {font-size: 1.22em;color: #0080ff;margin-top: 0.9em;}
+h1, h2, h3, h4, h5, h6 {line-height:1;font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ;;margin:0;padding: 0.15em 0;}
+h1 {font-size: 1.6em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 0;}
+h2 {font-size: 1.5em;color: #800040;margin-top: 1em;}
+h3 {font-size: 1.4em;color: #0080ff;margin-top: 0.9em;}
 /*h3 {font-size: 1.22em;color: #0080ff;width: 80%;margin-top: 0.9em;margin-bottom: 0.4em;}*/
-h4 {font-size: 1.15em;color: #008040;margin-top: 0.8em;}
-h5 {font-size: 1.05em;color: #808000;}
-h6 {font-size: 1.0em;color: #000000;}
+h4 {font-size: 1.2em;color: #008040;margin-top: 0.8em;}
+h5 {font-size: 1.1em;color: #808000;}
+h6 {font-size: 1.1em;color: #000000;}
 
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {margin:1em 0 0.6em;}
 p, ul, li, table {margin: 0;padding: 0;}
 p, pre, blockquote, table, ul, ol, dl {margin: 0.5em 0 1em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
@@ -41,7 +42,7 @@ iframe {position: relative;}
 
 .tocWrap {position: fixed; width: 200px;z-index: 100;top: 16%;right: 2.8%;display: none;}
 .toc {display: none;overflow: auto;overflow-x: hidden;border: 1px solid #F0C81E;border-radius: 0 0 1px 1px;color: #999;background: #0C1F2C;    padding: 12px;box-shadow: 0 1px 8px #000;}
-.tocWrap .toggler {text-align: center;font-size: 10.5pt;background: #F0C81E;border-radius: 2px 2px 0 0;color: #122;position: relative;z-index: 101;cursor: pointer;}
+.tocWrap .toggler {text-align: center;font-size: 11pt;background: #F0C81E;border-radius: 2px 2px 0 0;color: #122;position: relative;z-index: 101;cursor: pointer;}
 .toc ul {margin: 0;}
 .toc li {color: #eff;list-style-type: none;}
 .toc a {color: #eff;}
