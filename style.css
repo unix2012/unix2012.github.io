@@ -1,6 +1,6 @@
 html {color: #000000;min-height: 100%;background-color: #E9E0D3;padding: 0;margin: 0;}
 body {max-width: 1200px;margin:2em 20em 2em 20em;font-family:font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, Microsoft YaHei,Verdana, Aril, sans-serif;font-size:11pt;color:#c00000;line-height:160%}
-a:link {text-decoration:none}
+a:link {text-decoration:none;color:#0000E3}
 a:visited {text-decoration:none}
 a:hover {text-decoration:underline;color:#ff0000}
 input:focus, a:focus, button:focus {box-shadow: 0 0 3px #cb0;}
