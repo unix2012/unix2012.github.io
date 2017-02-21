@@ -21,7 +21,7 @@ ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
 li {margin: 0.3em auto;}
 ol, ul {margin-left: 1em;padding-left: 0.5em;}
 dt {font-weight: bold;}
-img {border: none;}
+img {border: none;vertical-align: top;}
 
 table {border-collapse: collapse;}
 th, td {border: 1px solid #ccc;padding: 0.3em 0.5em;background-color: #f0f0f0;}
