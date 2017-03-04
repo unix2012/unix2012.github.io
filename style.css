@@ -8,8 +8,7 @@ input:focus, a:focus, button:focus {box-shadow: 0 0 3px #cb0;}
 h1, h2, h3, h4, h5, h6 {line-height:1;font-family:Microsoft YaHei,Î¢ÈíÑÅºÚ;ËÎÌå;margin:0;padding: 0.15em 0;}
 h1 {font-size: 1.6em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 1em;}
 h2 {font-size: 1.5em;color: #800040;margin-top: 1em;}
-h3 {font-size: 1.4em;color: #0080ff;margin-top: 0.9em;}
-/*h3 {font-size: 1.22em;color: #0080ff;width: 80%;margin-top: 0.9em;margin-bottom: 0.4em;}*/
+h3 {font-size: 1.22em;color: #0080ff;margin-top: 0.8em;margin-bottom: 0.4em;}
 h4 {font-size: 1.2em;color: #008040;margin-top: 0.8em;}
 h5 {font-size: 1.1em;color: #808000;}
 h6 {font-size: 1.1em;color: #000000;}
@@ -18,7 +17,7 @@ h6 {font-size: 1.1em;color: #000000;}
 p, ul, li, table {margin: 0;padding: 0;}
 p, pre, blockquote, table, ul, ol, dl {margin: 0.5em 0 1em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
-li {margin: 0.3em auto;}
+li {margin: 0.2em 0.5em;}
 ol, ul {margin-left: 1em;padding-left: 0.5em;}
 dt {font-weight: bold;}
 img {border: none;vertical-align: top;}
@@ -51,8 +50,6 @@ iframe {position: relative;}
 .justright {text-align: right;}
 .justcenter {text-align: center;}
 .center {margin-left: auto;margin-right: auto;}
-
-
 
 /* classes for items of todo lists */
 /*

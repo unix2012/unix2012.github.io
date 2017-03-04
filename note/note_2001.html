@@ -1,6 +1,6 @@
  <html>
    <head>
-       <title>一句话</title>
+       <title>VimWiki的一些技巧</title>
        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="zh-CN" />
        <link rel="Stylesheet" type="text/css" href="../style.css" />
@@ -19,21 +19,53 @@
 <div class="content"> 
 
 
-<h3 id="toc_0.0.1" class="justcenter">一句话</h3>
+<h3 id="toc_0.0.1" class="justcenter">VimWiki的一些技巧</h3>
 
 <hr />
 
 <ul>
 <li>
-明朗。
-
-<li>
-简约。
-
-<li>
-为什么我表述事情特别罗嗦呢？ 
+<strong>模板</strong>
 
 </ul>
+
+<p>
+	在模板目录下设定各种模板，而你只需在写Wiki时，在源代码中加上「 <strong>%template 模板名</strong> 」即可。这时，生成网页不使用默认模板，而使用单独制定的特制模板。
+</p>
+
+<ul>
+<li>
+<strong>区分内外链</strong>
+
+</ul>
+
+<p>
+	即点击外链，在新窗口打开；点击内链，在当前窗口打开。
+</p>
+
+<p>
+	代码如下：
+</p>
+<pre>
+   $("a[href^='http://']").each(function(){
+      this.target = "_blank";
+    });
+
+    $("a[href^='https://']").each(function(){
+      this.target = "_blank";
+    });
+</pre>
+
+<p>
+	很简单，就是将带有「http」或「https」的链接另开一个网页。
+</p>
+
+<p>
+	前提：别忘了在网页调用jQuery:
+</p>
+<pre>
+  &lt;script type="text/javascript" src="js/jquery-1.8.3.min.js"&gt;&lt;/script&gt;
+</pre>
    </div>
 <hr>
 <div align=center style="color: #000000">
