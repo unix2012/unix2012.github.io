@@ -15,7 +15,7 @@ h6 {font-size: 1.1em;color: #000000;}
 
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {margin:1em 0 0.6em;}
 p, ul, li, table {margin: 0;padding: 0;}
-p, pre, blockquote, table, ul, ol, dl {margin: 0.5em 0 1em;}
+p, pre, blockquote, table, ul, ol, dl {margin: 0.3em 0 0.3em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
 li {margin: 0.2em 0.5em;}
 ol, ul {margin-left: 1em;padding-left: 0.5em;}
