@@ -1,5 +1,5 @@
 html {color: #000000;min-height: 100%;background-color: #E9E0D3;padding: 0;margin: 0;}
-body {max-width: 1440px;margin:2em 20em 2em 20em;font-family:Lucida Grande, Lucida Sans Unicode, Hiragino Sans GB, Microsoft YaHei,Verdana, Aril, sans-serif;font-size:12pt;color:#000000;line-height:160%}
+body {max-width: 1440px;margin:2em 20em 2em 20em;font-family:Lucida Grande, Lucida Sans Unicode, Hiragino Sans GB, Microsoft YaHei,Verdana, Aril, sans-serif;font-size:11pt;color:#000000;line-height:160%}
 a:link {text-decoration:none;color:#0000E3}
 a:visited {text-decoration:none}
 a:hover {text-decoration:underline;color:#ff0000}
@@ -17,7 +17,7 @@ h6 {font-size: 1.1em;color: #000000;}
 p, ul, li, table {margin: 0;padding: 0;}
 p, pre, blockquote, table, ul, ol, dl {margin: 0.5em 0 0.5em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em;margin-bottom: 0.5em;}
-li {margin: 0.5em 0.5em;}
+li {margin: 0.2em 0.5em;}
 ol, ul {margin-left: 1em;padding-left: 0.5em;}
 dt {font-weight: bold;}
 img {border: none;vertical-align: top;}
@@ -41,7 +41,7 @@ iframe {position: relative;}
 
 .tocWrap {position: fixed; width: 200px;z-index: 100;top: 16%;right: 2.8%;display: none;}
 .toc {display: none;overflow: auto;overflow-x: hidden;border: 1px solid #F0C81E;border-radius: 0 0 1px 1px;color: #999;background: #0C1F2C;    padding: 12px;box-shadow: 0 1px 8px #000;}
-.tocWrap .toggler {text-align: center;font-size: 12pt;background: #F0C81E;border-radius: 2px 2px 0 0;color: #122;position: relative;z-index: 101;cursor: pointer;}
+.tocWrap .toggler {text-align: center;font-size: 11pt;background: #F0C81E;border-radius: 2px 2px 0 0;color: #122;position: relative;z-index: 101;cursor: pointer;}
 .toc ul {margin: 0;}
 .toc li {color: #eff;list-style-type: none;}
 .toc a {color: #eff;}
