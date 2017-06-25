@@ -1,0 +1,1 @@
+document.write("<a href='%root_path%index.html'>首页</a> | <a href='%root_path%note.html'>笔记</a> | <a href='%root_path%todo.html'>清单</a> | <a href='%root_path%diary.html'>记事</a> | <a href='%root_path%about.html'>关于</a>");
