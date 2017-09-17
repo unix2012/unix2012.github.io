@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+       <title>VimWiki的锚点</title>
+       <link rel="Stylesheet" type="text/css" href="../style.css" />
+       <!--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
+       <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+       <script type="text/javascript" src="../js/wiki.js"></script>
+   </head>
+   <body>
+<div>
+<a href="../index.html">首页</a> | 
+<a href="../note.html">笔记</a> | <a href="../write.html">书简</a> | <a href="../todo.html">清单</a> | <a href="../diary.html">记事</a> | 
+<a href="../about.html">关于</a>
+</div>
+<br>
+<div class="content">
+
+<h3 id="toc_0.0.1" class="justcenter">VimWiki的锚点</h3>
+
+<hr />
+<p>
+我使用的VimWiki版本一直是旧版1.3版，新版2.3由于更新了很多配置，折腾了许久却没弄会。
+</p>
+
+<p>
+但是2.3版有个特别好的功能，就是能使用锚点。这个功能让我有些无法割舍。
+</p>
+
+<p>
+后来想了好久，仍无有效措施。
+</p>
+
+<p>
+无奈只能用html语法直接实现 —— 只是这方法太笨拙了。
+</p>
+
+<ul>
+<li>
+首先是在VimWiki配置文件中的参数中将「a」和「span」加进去：
+
+</ul>
+
+<pre>
+let g:vimwiki_valid_html_tags='sub,sup,kbd,br,hr,div,del,code,red,center,left,right,pre,a,span'
+</pre>
+
+<ul>
+<li>
+然后在wiki源文件里直接用html语句加上锚点链接。
+
+</ul>
+
+<pre>
+&lt;a href="#命名"&gt;文字&lt;/a&gt;
+&lt;span id="命名" name="命名"&gt;文字&lt;/span&gt;
+</pre>
+
+<ul>
+<li>
+<strong>注意事项：</strong> 但这个设置有副作用，就是使用{{{}}}进行源代码说明时，这几个标签会被输出为实际的HTML标签，而不是文本。至少我这个BLOG里就不能使用了。
+
+</ul>
+</div>
+<hr>
+<div align=center style="color: #000000">
+<script type="text/javascript">copyright=new Date();update=copyright.getFullYear();document.write("Copyright 1999-"+ update + " 哥舒");</script>
+</div>
+</body>
+</html>
