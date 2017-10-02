@@ -3,7 +3,7 @@
    <head>
        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="zh-CN" />
-       <title>每日工作三问</title>
+       <title>Emacs和Vim的窗口操作</title>
        <link rel="Stylesheet" type="text/css" href="../style.css" />
        <!--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
        <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
@@ -12,30 +12,116 @@
    <body>
 <div>
 <a href="../index.html">首页</a> | 
-<a href="../note.html">笔记</a> | <a href="../write.html">复盘</a> | <a href="../todo.html">清单</a> | <a href="../diary.html">记事</a> | 
+<a href="../personal.html">个人</a> | <a href="../work.html">工作</a> | <a href="../life.html">生活</a> | 
 <a href="../about.html">关于</a>
 </div>
 <br>
 <div class="content">
 
-<h2 id="toc_0.1" class="justcenter">每日工作三问</h2>
+<h2 id="toc_0.1" class="justcenter">Emacs和Vim的窗口操作</h2>
 
 <hr />
-<ol>
-<li>
-每周一：本周干什么？
-
-<li>
-每天早上：今天干什么？
-
-<li>
-每天下班前：今天完成了什么？有什么问题？
-
-</ol>
-
-<p>
-这其实就是周计划、日计划以及每日回顾。
-</p>
+<table>
+<tr>
+<th>
+操作要求
+</th>
+<th>
+Emacs操作
+</th>
+<th>
+Vim操作
+</th>
+</tr>
+<tr>
+<td>
+垂直平分
+</td>
+<td>
+C-x 2
+</td>
+<td>
+:sp
+</td>
+</tr>
+<tr>
+<td>
+水平平分
+</td>
+<td>
+C-x 3
+</td>
+<td>
+:vsp
+</td>
+</tr>
+<tr>
+<td>
+关闭本窗口
+</td>
+<td>
+C-x 0
+</td>
+<td>
+:close
+</td>
+</tr>
+<tr>
+<td>
+关闭其它窗口
+</td>
+<td>
+C-x 1
+</td>
+<td>
+:only
+</td>
+</tr>
+<tr>
+<td>
+切换窗口
+</td>
+<td>
+C-x o
+</td>
+<td>
+C-w w
+</td>
+</tr>
+<tr>
+<td>
+全部保存
+</td>
+<td>
+C-x s
+</td>
+<td>
+:wall
+</td>
+</tr>
+<tr>
+<td>
+全部退出
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+:qall
+</td>
+</tr>
+<tr>
+<td>
+全部保存退出
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+:wqall
+</td>
+</tr>
+</table>
 </div>
 <hr>
 <div align=center style="color: #000000">
