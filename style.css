@@ -6,8 +6,8 @@ a:hover {text-decoration:underline;color:#ff0000}
 input:focus, a:focus, button:focus {box-shadow: 0 0 3px #cb0;}
 
 h1, h2, h3, h4, h5, h6 {line-height:1;font-family:Microsoft YaHei,Î¢ÈíÑÅºÚ;ËÎÌå;margin:0;padding: 0.15em 0;}
-h1 {font-size: 1.6em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 1em;}
-h2 {font-size: 1.5em;color: #800040;margin-top: 1em;}
+h1 {font-size: 1.65em;color: #f37;padding-bottom: 0.1em;margin-bottom: 0.5em;margin-top: 1em;}
+h2 {font-size: 1.4em;color: #800040;margin-top: 1em;}
 h3 {font-size: 1.22em;color: #0080ff;margin-top: 0.8em;margin-bottom: 0.4em;}
 h4 {font-size: 1.2em;color: #008040;margin-top: 0.8em;}
 h5 {font-size: 1.1em;color: #808000;}
