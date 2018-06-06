@@ -1,7 +1,7 @@
 <?php
 /*
 +---------------------------------------------------+
-| Name : NEATPIC (ÎŞÊı¾İ°æ±¾)
+| Name : NEATPIC (æ— æ•°æ®ç‰ˆæœ¬)
 +---------------------------------------------------+
 | Created / Modify : 2003-12-27 / 2004-4-13
 +---------------------------------------------------+
@@ -18,18 +18,18 @@
 +---------------------------------------------------+
 | Note :
 |
-| 1.±¾Èí¼ş¶ÔÓÚ·ÇÉÌÒµÓÃ»§ÍêÈ«Ãâ·Ñ,Èç¹ûÒªÊ¹ÓÃÔÚÉÌÒµÓÃÍ¾
-| ·½Ãæ,±ØĞëÈ¡µÃ×÷ÕßµÄÊÚÈ¨.
+| 1.æœ¬è½¯ä»¶å¯¹äºéå•†ä¸šç”¨æˆ·å®Œå…¨å…è´¹,å¦‚æœè¦ä½¿ç”¨åœ¨å•†ä¸šç”¨é€”
+| æ–¹é¢,å¿…é¡»å–å¾—ä½œè€…çš„æˆæƒ.
 |
-| 2.Äã¿ÉÒÔÈÎÒâ´«²¥ÒÔ¼°ĞŞ¸Ä±¾³ÌĞò,µ«²»ÄÜÒÔÈÎºÎĞÎÊ½É¾³ı
-| ±¾³ÌĞòµÄ°æÈ¨.Çë¼Ç×¡,±£Áô×÷Õß°æÈ¨ÊÇ¶Ô×÷Õß¹¤×÷µÄ×ğ¾´.
+| 2.ä½ å¯ä»¥ä»»æ„ä¼ æ’­ä»¥åŠä¿®æ”¹æœ¬ç¨‹åº,ä½†ä¸èƒ½ä»¥ä»»ä½•å½¢å¼åˆ é™¤
+| æœ¬ç¨‹åºçš„ç‰ˆæƒ.è¯·è®°ä½,ä¿ç•™ä½œè€…ç‰ˆæƒæ˜¯å¯¹ä½œè€…å·¥ä½œçš„å°Šæ•¬.
 |
-| 3.Èç¹ûÓĞÎÊÌâ,¿ÉÒÔÍ¨¹ıÉÏÃæÌá¹©µÄ·½Ê½½øĞĞ½â´ğ,µ«×÷Õß
-| Ñ§Òµ·±ÖØ,Èç¹û²»ÄÜ¼°Ê±»òÕß²»½â´ğ,ÇëÁÂ½â.
+| 3.å¦‚æœæœ‰é—®é¢˜,å¯ä»¥é€šè¿‡ä¸Šé¢æä¾›çš„æ–¹å¼è¿›è¡Œè§£ç­”,ä½†ä½œè€…
+| å­¦ä¸šç¹é‡,å¦‚æœä¸èƒ½åŠæ—¶æˆ–è€…ä¸è§£ç­”,è¯·è°…è§£.
 |
-| 4.×÷Õß¶ÔÊ¹ÓÃ¸Ã³ÌĞòµ¼ÖÂµÄÎÊÌâ,²»ÓèÒÔ¸ºÔğ.
+| 4.ä½œè€…å¯¹ä½¿ç”¨è¯¥ç¨‹åºå¯¼è‡´çš„é—®é¢˜,ä¸äºˆä»¥è´Ÿè´£.
 |
-| 5.±¾³ÌĞò°æÈ¨¹é NeatStudio ËùÓĞ.½ûÖ¹ÈÎºÎÇÖÈ¨ĞĞÎª!
+| 5.æœ¬ç¨‹åºç‰ˆæƒå½’ NeatStudio æ‰€æœ‰.ç¦æ­¢ä»»ä½•ä¾µæƒè¡Œä¸º!
 |
 +---------------------------------------------------+
 */
@@ -45,26 +45,26 @@
 +----------------------------------+
 */
 
-define("M1", 1024000);  // ¶¨Òå1MÄÚÈİµÄ´óĞ¡£¬Çë²»Òª¸Ä¶¯
+define("M1", 1024000);  // å®šä¹‰1Må†…å®¹çš„å¤§å°ï¼Œè¯·ä¸è¦æ”¹åŠ¨
 
-$configAdminPass		= "5175891";										//¹ÜÀíÔ±ÃÜÂë ×¢:°²È«Æğ¼û,Ä¬ÈÏÃÜÂë²»ÄÜµÇÂ½¹ÜÀí
-$configWantedPass		= false;										//²é¿´Ïà²áÊÇ·ñĞèÒªÃÜÂë ĞèÒª:true ²»ĞèÒª:false
-$configOpenGzip			= true;											//ÊÇ·ñÑ¹ËõÒ³Ãæ Ñ¹Ëõ:true ²»Ñ¹Ëõ:false
-$configShowPicSize		= false;										//ÊÇ·ñÏÔÊ¾Í¼Æ¬µÄ´óĞ¡ (µ¥Î»:KB) ÏÔÊ¾:true ²»ÏÔÊ¾:false (×¢:²»ÏÔÊ¾,³ÌĞòÔËĞĞËÙ¶È½«Ìá¸ß)
-$configExt				= array('jpg', 'jpeg', 'gif', 'png', 'bmp');	//Í¼Æ¬ÀàĞÍ
-$strLenMax				= 32;											//ÎÄ¼şÃû×ÖÏŞÖÆ³¤¶È (·ÀÖ¹³ÅÆÆ±í¸ñ)
-$configEachPageMax		= 8;											//Ã¿Ò³ÏÔÊ¾µÄÍ¼Æ¬ÊıÄ¿
-$configEachLineMax		= 4;											//Ã¿ĞĞÏÔÊ¾µÄÍ¼Æ¬ÊıÄ¿
-$configTDWidth			= 238;											//±í¸ñ¿í¶È
-$configTDHeight			= 166;											//±í¸ñ¸ß¶È
-$configPageMax			= 5;											//·ÖÒ³Ç°ºóÔ¤ÀÀÊı
-$configDirPasswordFile	= "neatpicPassword.php";						//ÃÜÂëÎÄ¼ş
-$configTilte			= "Îå°êÀ¼";							//±êÌâ
-$configVer				= "1.2.3";										//³ÌĞò°æ±¾ºÅ
-$configAllowSizes		= 20;											//ÔÊĞíÉÏ´«µÄÍ¼Æ¬ÈİÁ¿µÄ×Ü´óĞ¡ £¨µ¥Î»ÎªM£©
-$user					= "hill";										//¶¨ÒåÈ¨ÏŞ
-$homeUrl				= "http://hill.51.net";							//ÍøÕ¾Ö÷Ò³µØÖ·
-$showHomeUrl			= true;											//ÊÇ·ñÏÔÊ¾Ö÷Ò³Á´½Ó
+$configAdminPass		= "5175891";										//ç®¡ç†å‘˜å¯†ç  æ³¨:å®‰å…¨èµ·è§,é»˜è®¤å¯†ç ä¸èƒ½ç™»é™†ç®¡ç†
+$configWantedPass		= false;										//æŸ¥çœ‹ç›¸å†Œæ˜¯å¦éœ€è¦å¯†ç  éœ€è¦:true ä¸éœ€è¦:false
+$configOpenGzip			= true;											//æ˜¯å¦å‹ç¼©é¡µé¢ å‹ç¼©:true ä¸å‹ç¼©:false
+$configShowPicSize		= false;										//æ˜¯å¦æ˜¾ç¤ºå›¾ç‰‡çš„å¤§å° (å•ä½:KB) æ˜¾ç¤º:true ä¸æ˜¾ç¤º:false (æ³¨:ä¸æ˜¾ç¤º,ç¨‹åºè¿è¡Œé€Ÿåº¦å°†æé«˜)
+$configExt				= array('jpg', 'jpeg', 'gif', 'png', 'bmp');	//å›¾ç‰‡ç±»å‹
+$strLenMax				= 32;											//æ–‡ä»¶åå­—é™åˆ¶é•¿åº¦ (é˜²æ­¢æ’‘ç ´è¡¨æ ¼)
+$configEachPageMax		= 8;											//æ¯é¡µæ˜¾ç¤ºçš„å›¾ç‰‡æ•°ç›®
+$configEachLineMax		= 4;											//æ¯è¡Œæ˜¾ç¤ºçš„å›¾ç‰‡æ•°ç›®
+$configTDWidth			= 238;											//è¡¨æ ¼å®½åº¦
+$configTDHeight			= 166;											//è¡¨æ ¼é«˜åº¦
+$configPageMax			= 5;											//åˆ†é¡µå‰åé¢„è§ˆæ•°
+$configDirPasswordFile	= "neatpicPassword.php";						//å¯†ç æ–‡ä»¶
+$configTilte			= "äº”ç“£å…°";							//æ ‡é¢˜
+$configVer				= "1.2.3";										//ç¨‹åºç‰ˆæœ¬å·
+$configAllowSizes		= 20;											//å…è®¸ä¸Šä¼ çš„å›¾ç‰‡å®¹é‡çš„æ€»å¤§å° ï¼ˆå•ä½ä¸ºMï¼‰
+$user					= "hill";										//å®šä¹‰æƒé™
+$homeUrl				= "http://hill.51.net";							//ç½‘ç«™ä¸»é¡µåœ°å€
+$showHomeUrl			= true;											//æ˜¯å¦æ˜¾ç¤ºä¸»é¡µé“¾æ¥
 
 /*
 +----------------------------------+
@@ -221,7 +221,7 @@ Class neatpic
 		$this->pathArray = explode("/", $this->path);
 		$this->pathLevelNum = count($this->pathArray);
 		$this->nowDirName = $this->pathArray[$this->pathLevelNum - 1];
-		if ($this->nowDirName == ".") $this->nowDirName = "¸ùÄ¿Â¼";
+		if ($this->nowDirName == ".") $this->nowDirName = "æ ¹ç›®å½•";
 	}
 
 	/*
@@ -275,7 +275,7 @@ Class neatpic
 		}
 
 		$this->dirArray[] = $overPath;
-		$this->dirNameArray[] = "ÉÏ¼¶Ä¿Â¼";
+		$this->dirNameArray[] = "ä¸Šçº§ç›®å½•";
 
 		for($i = 1; $i < $this->pathLevelNum; $i++)
 		{
@@ -336,7 +336,7 @@ Class neatpic
 
 	/*
 	+----------------------------------+
-	| »ñÈ¡ÎÄ¼ş¼Ğ×Ü´óĞ¡ 
+	| è·å–æ–‡ä»¶å¤¹æ€»å¤§å° 
 	+----------------------------------+
 	| create by Jacob 
 	+----------------------------------+
@@ -354,7 +354,7 @@ Class neatpic
 			$fileName = $file;
 			$file = $path."/".$file;
 
-			// Á¬.&..µÄÖµÒ²¼ÆÉÏ
+			// è¿.&..çš„å€¼ä¹Ÿè®¡ä¸Š
 			if (is_dir($file) && $fileName <> ".." && $fileName <> ".")
 			{
 				$size += $this->getDirSize($file);
@@ -426,23 +426,23 @@ Class neatpic
 	{
 		print("<center>\n");
 		print("<BR>");
-		print("[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".($this->page - 1)."\" title=\"ÉÏÒ»Ò³\">ÉÏÒ»Ò³</A> ]&nbsp;");
+		print("[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".($this->page - 1)."\" title=\"ä¸Šä¸€é¡µ\">ä¸Šä¸€é¡µ</A> ]&nbsp;");
 		
-		print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=1\"  title=\"Ê×Ò³\"><< </A>\n");
+		print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=1\"  title=\"é¦–é¡µ\"><< </A>\n");
 
 		for ($i = $this->pageStart; $i < $this->page; $i++)
-			print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$i."\" title=\"µÚ ".$i." Ò³\">[".$i."]</A>&nbsp;");
+			print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$i."\" title=\"ç¬¬ ".$i." é¡µ\">[".$i."]</A>&nbsp;");
 
 		printf("[<FONT COLOR=\"red\"><B>%s</B></FONT>]", $this->page);
 
 		for ($i = $this->pageMiddle; $i < $this->pageEnd; $i++)
-			print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$i."\" title=\"µÚ ".$i." Ò³\">[".$i."]</A>&nbsp;");
+			print("<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$i."\" title=\"ç¬¬ ".$i." é¡µ\">[".$i."]</A>&nbsp;");
 
-		print("...<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$this->pageTotal."\" title=\"µÚ " . $this->pageTotal . " Ò³\">[" . $this->pageTotal . "]</A>\n");
+		print("...<A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$this->pageTotal."\" title=\"ç¬¬ " . $this->pageTotal . " é¡µ\">[" . $this->pageTotal . "]</A>\n");
 		
-		print(" <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$this->pageTotal."\" title=\"Î²Ò³\">>></A>\n");
+		print(" <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".$this->pageTotal."\" title=\"å°¾é¡µ\">>></A>\n");
 
-		print("[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".($this->page + 1)."\" title=\"ÏÂÒ»Ò³\">ÏÂÒ»Ò³</A> ]&nbsp;¹² <B><FONT COLOR=\"red\">".$this->pageTotal."</FONT></B> Ò³&nbsp;&nbsp;µ±Ç°ËùÔÚµÚ <B><FONT COLOR=\"red\">".$this->page."</FONT></B> Ò³");
+		print("[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=".$this->style."&page=".($this->page + 1)."\" title=\"ä¸‹ä¸€é¡µ\">ä¸‹ä¸€é¡µ</A> ]&nbsp;å…± <B><FONT COLOR=\"red\">".$this->pageTotal."</FONT></B> é¡µ&nbsp;&nbsp;å½“å‰æ‰€åœ¨ç¬¬ <B><FONT COLOR=\"red\">".$this->page."</FONT></B> é¡µ");
 		print("<BR><BR>");
 		print("</center>\n");
 	}
@@ -527,9 +527,9 @@ Class neatpic
 		function rmThis(what,url){
 			var info;
 			if (what == "")
-				info = "ÊÇ·ñÈ·¶¨É¾³ı£¿";
+				info = "æ˜¯å¦ç¡®å®šåˆ é™¤ï¼Ÿ";
 			else
-				info = "ÊÇ·ñÈ·¶¨É¾³ı" + what;
+				info = "æ˜¯å¦ç¡®å®šåˆ é™¤" + what;
 			if(window.confirm(info)){
 				location.href = url;
 			}
@@ -663,7 +663,7 @@ Class neatpic
 
 	function showTitle()
 	{
-		print("<meta HTTP-EQUIV=Content-Type content=\"text/html; charset=gb2312\">\n");
+		print("<meta HTTP-EQUIV=Content-Type content=\"text/html; charset=utf-8\">\n");
 		print("<title>".$this->configTilte."</title>\n");
 		print("<BODY>\n");
 		print("<A NAME=\"TOP\">\n");
@@ -673,7 +673,7 @@ Class neatpic
 		print($this->configTilte);
 		print("</b></div></center>\n");
 		print("<BR>\n");
-		print("<center><font color=black>Ö¸ÈçÀ¼»¨ĞÄËÆÁ«£¬²»Ğ¦ÑÌ»¨Ö»Ğ¦ìø¡£</font></center><BR>\n");
+		print("<center><font color=black>æŒ‡å¦‚å…°èŠ±å¿ƒä¼¼è²ï¼Œä¸ç¬‘çƒŸèŠ±åªç¬‘ç¦…ã€‚</font></center><BR>\n");
 	}
 	
 	/*
@@ -691,13 +691,13 @@ Class neatpic
 		print("<tbody>\n");
 		print("<tr>\n");
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
-		print("<CENTER>µ±Ç°Ä¿Â¼ : <B><FONT COLOR=\"red\">".$this->nowDirName."</FONT></B>&nbsp;&nbsp;[ ×ÓÄ¿Â¼Êı : <B><FONT COLOR=\"red\">". ($this->dirNum - 1) ."</FONT></B>&nbsp;&nbsp;Í¼Æ¬ÊıÄ¿ : <B><FONT COLOR=\"red\">".$this->picNum."</FONT></B>  Ã¿Ò³ÏÔÊ¾ : <B><FONT COLOR=\"red\">".$this->configEachPageMax."</FONT></B> ¸ö ]&nbsp;&nbsp;²é¿´Ä£Ê½: [ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=real&page=".$this->page."\"><FONT COLOR=\"blue\" title=\"°´ÕÕÕæÊµ±ÈÀı²é¿´Í¼Æ¬\">ÕæÊµ</FONT></A> ]&nbsp;[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=small&page=".$this->page."\"><FONT COLOR=\"blue\" title=\"ÒÔËõĞ¡±ÈÀı²é¿´Í¼Æ¬\">ËõÂÔ</FONT></A> ]&nbsp;&nbsp;</CENTER>");
+		print("<CENTER>å½“å‰ç›®å½• : <B><FONT COLOR=\"red\">".$this->nowDirName."</FONT></B>&nbsp;&nbsp;[ å­ç›®å½•æ•° : <B><FONT COLOR=\"red\">". ($this->dirNum - 1) ."</FONT></B>&nbsp;&nbsp;å›¾ç‰‡æ•°ç›® : <B><FONT COLOR=\"red\">".$this->picNum."</FONT></B>  æ¯é¡µæ˜¾ç¤º : <B><FONT COLOR=\"red\">".$this->configEachPageMax."</FONT></B> ä¸ª ]&nbsp;&nbsp;æŸ¥çœ‹æ¨¡å¼: [ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=real&page=".$this->page."\"><FONT COLOR=\"blue\" title=\"æŒ‰ç…§çœŸå®æ¯”ä¾‹æŸ¥çœ‹å›¾ç‰‡\">çœŸå®</FONT></A> ]&nbsp;[ <A HREF=\"".$_SERVER['PHP_SELF']."?path=".rawurlencode($this->path)."&style=small&page=".$this->page."\"><FONT COLOR=\"blue\" title=\"ä»¥ç¼©å°æ¯”ä¾‹æŸ¥çœ‹å›¾ç‰‡\">ç¼©ç•¥</FONT></A> ]&nbsp;&nbsp;</CENTER>");
 		print("</td>\n");
 
 		
 		if ($this->showHomeUrl == true) {
 			print("<td bgcolor=\"E9E0D3\" width=\"80\" style=\"border: 1px solid #CCCCCC\" align=\"center\">\n");
-			print("[ <A HREF=\"" . $this->homeUrl . "\"><FONT COLOR=red>Ö÷Õ¾</FONT></A> ]");
+			print("[ <A HREF=\"" . $this->homeUrl . "\"><FONT COLOR=red>ä¸»ç«™</FONT></A> ]");
 			print("</td>\n");
 		}
 
@@ -732,11 +732,11 @@ Class neatpic
 		{
 			$this->ShowJSm();
 			for($i = 1; $i < $this->dirNum; $i++) {
-				$this->dirOptionList .= "<A HREF=\"" . $_SERVER['PHP_SELF'] . "?rmPath=" . rawurlencode($this->dirArray[$i]) . "&thisPath=" . rawurlencode($_GET['path']) . "&action=rmdirquite\" alt=\"ÕæÒªÉ¾³ı[" . $this->dirNameArray[$i] . "]Ä¿Â¼¼°ÎÄ¼şÂğ£¿\">Del</A> [ <A HREF=\"" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[$i]) . "\" alt=\"½øÈë[" . $this->dirNameArray[$i] . "]Ä¿Â¼\"> " . $this->dirNameArray[$i] . "</A> ] ";
+				$this->dirOptionList .= "<A HREF=\"" . $_SERVER['PHP_SELF'] . "?rmPath=" . rawurlencode($this->dirArray[$i]) . "&thisPath=" . rawurlencode($_GET['path']) . "&action=rmdirquite\" alt=\"çœŸè¦åˆ é™¤[" . $this->dirNameArray[$i] . "]ç›®å½•åŠæ–‡ä»¶å—ï¼Ÿ\">Del</A> [ <A HREF=\"" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[$i]) . "\" alt=\"è¿›å…¥[" . $this->dirNameArray[$i] . "]ç›®å½•\"> " . $this->dirNameArray[$i] . "</A> ] ";
 			}
 		} else {
 			for($i = 1; $i < $this->dirNum; $i++) {
-				$this->dirOptionList .= "[ </A><A HREF=\"" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[$i]) . "\" alt=\"½øÈë[" . $this->dirNameArray[$i] . "]Ä¿Â¼\"> " . $this->dirNameArray[$i] . "</A> ] ";
+				$this->dirOptionList .= "[ </A><A HREF=\"" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[$i]) . "\" alt=\"è¿›å…¥[" . $this->dirNameArray[$i] . "]ç›®å½•\"> " . $this->dirNameArray[$i] . "</A> ] ";
 			}
 		}
 
@@ -759,7 +759,7 @@ Class neatpic
 		if ($session['loginUser'] != null && $session['loginUser'] == $this->user)
 		{
 			$_width = 250;
-			$_str = " <input type=button value=\"ĞÂ½¨·ÖÀàÄ¿Â¼\" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->path) . "&action=makedir'\" alt=\"ĞÂ½¨×ÓÄ¿Â¼\">&nbsp;&nbsp;";
+			$_str = " <input type=button value=\"æ–°å»ºåˆ†ç±»ç›®å½•\" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->path) . "&action=makedir'\" alt=\"æ–°å»ºå­ç›®å½•\">&nbsp;&nbsp;";
 		}else {
 			$_width= 140;
 			$_str = "";
@@ -769,11 +769,11 @@ Class neatpic
 		print("<tbody>\n");
 		print("<tr>\n");
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" width=\"70\">\n");
-		print("<CENTER>Ä¿Â¼ÁĞ±í</CENTER>");
+		print("<CENTER>ç›®å½•åˆ—è¡¨</CENTER>");
 		print("</td>\n");
 
 		print("<td bgcolor=\"E9E0D3\" align=\"center\" height=\"30\" width=\"" . $_width . "\" style=\"border: 1px solid #CCCCCC\">\n");
-		print("<input type=button value=\" ·µ»ØÉÏ¼¶Ä¿Â¼ \" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[0]) . "'\" alt=\"·µ»Ø ÉÏ¼¶Ä¿Â¼\"> " . $_str);
+		print("<input type=button value=\" è¿”å›ä¸Šçº§ç›®å½• \" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->dirArray[0]) . "'\" alt=\"è¿”å› ä¸Šçº§ç›®å½•\"> " . $_str);
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 		print("&nbsp;&nbsp;" . $this->dirOptionList);
 		print("</td>\n");
@@ -843,9 +843,9 @@ Class neatpic
 				$this->configShowPicSize == true ? $picFileSize = sprintf("%0.2f", filesize($this->picArray[$i]) / 1024) : $picFileSize = " -- ";
 
 				if ($session['loginUser'] != null && $session['loginUser'] == $this->user)
-					print("<BR><INPUT TYPE=\"checkbox\" NAME=\"delfile[]\" VALUE=\"" . $this->picFileArray[$i] . "\" title=\"É¾³ıÍ¼Æ¬ <FONT COLOR=blue>" . $this->picFileArray[$i] . "</FONT>\">&nbsp;&nbsp;");
+					print("<BR><INPUT TYPE=\"checkbox\" NAME=\"delfile[]\" VALUE=\"" . $this->picFileArray[$i] . "\" title=\"åˆ é™¤å›¾ç‰‡ <FONT COLOR=blue>" . $this->picFileArray[$i] . "</FONT>\">&nbsp;&nbsp;");
 
-				printf("<A href=\"#TOP\">·µ»Ø¶¥²¿</A>&nbsp;&nbsp;#%s&nbsp;&nbsp;%s&nbsp;&nbsp;%s ¡Á %s&nbsp;&nbsp;%s KB<BR><BR>\n",($i + 1), $this->picFileArray[$i], $this->picRealSizeWidth, $this->picRealSizeHeight, $picFileSize);
+				printf("<A href=\"#TOP\">è¿”å›é¡¶éƒ¨</A>&nbsp;&nbsp;#%s&nbsp;&nbsp;%s&nbsp;&nbsp;%s Ã— %s&nbsp;&nbsp;%s KB<BR><BR>\n",($i + 1), $this->picFileArray[$i], $this->picRealSizeWidth, $this->picRealSizeHeight, $picFileSize);
 				printf("<A href=\"%s\" target=\"_blank\"><IMG SRC=\"%s\" BORDER=\"0\"></A><BR><BR>\n", $this->picEncodeArray[$i], $this->picEncodeArray[$i]);
 			}
 
@@ -883,14 +883,14 @@ Class neatpic
 				print("<TD bgcolor=\"#E9E0D3\" height=\"20\" colspan=\"3\"><CENTER>" . $this->sortName($this->picFileArray[$i]) . "</CENTER></TD>\n");
 				print("</TR>\n");
 				print("<TR>\n");
-				print("<TD width=\"" . $this->configTDWidth . "\" height=\"" . $this->configTDHeight . "\" style=\"border: 0px solid #CCCCCC\" colspan=\"3\"><CENTER><A href=\"" . $this->picEncodeArray[$i] . "\" target=\"_blank\"><IMG SRC=\"" . $this->picEncodeArray[$i] . "\" BORDER=\"0\" width=\"" . $this->temp['Width'] . "\" height=\"" . $this->temp['Height'] . "\" ALT=\"ÎÄ¼ş : <FONT COLOR='red'>" . $this->picFileArray[$i] . "</FONT>&nbsp;&nbsp;<BR>&nbsp;&nbsp;³ß´ç : <FONT COLOR='blue'>" . $this->picRealSizeWidth . " ¡Á " . $this->picRealSizeHeight . "</FONT> ÏñËØ&nbsp;&nbsp;<BR>&nbsp;&nbsp;¸ñÊ½ : <FONT COLOR='green'>" . $this->getFileExt($this->picFileArray[$i]) . "</FONT>&nbsp;&nbsp;<BR>&nbsp;&nbsp;´óĞ¡ : <FONT COLOR='green'>" . $picFileSize . "</FONT> KB&nbsp;&nbsp;\"></A></CENTER></TD>\n");
+				print("<TD width=\"" . $this->configTDWidth . "\" height=\"" . $this->configTDHeight . "\" style=\"border: 0px solid #CCCCCC\" colspan=\"3\"><CENTER><A href=\"" . $this->picEncodeArray[$i] . "\" target=\"_blank\"><IMG SRC=\"" . $this->picEncodeArray[$i] . "\" BORDER=\"0\" width=\"" . $this->temp['Width'] . "\" height=\"" . $this->temp['Height'] . "\" ALT=\"æ–‡ä»¶ : <FONT COLOR='red'>" . $this->picFileArray[$i] . "</FONT>&nbsp;&nbsp;<BR>&nbsp;&nbsp;å°ºå¯¸ : <FONT COLOR='blue'>" . $this->picRealSizeWidth . " Ã— " . $this->picRealSizeHeight . "</FONT> åƒç´ &nbsp;&nbsp;<BR>&nbsp;&nbsp;æ ¼å¼ : <FONT COLOR='green'>" . $this->getFileExt($this->picFileArray[$i]) . "</FONT>&nbsp;&nbsp;<BR>&nbsp;&nbsp;å¤§å° : <FONT COLOR='green'>" . $picFileSize . "</FONT> KB&nbsp;&nbsp;\"></A></CENTER></TD>\n");
 				print("<TR>\n");
 				print("<TD bgcolor=\"#E9E0D3\" width=30><CENTER>");
 
 				if ($session['loginUser'] != null && $session['loginUser'] == $this->user)
-					print("<INPUT TYPE=\"checkbox\" NAME=\"delfile[]\" VALUE=\"" . $this->picFileArray[$i] . "\" title=\"É¾³ıÍ¼Æ¬ <FONT COLOR=blue>" . $this->picFileArray[$i] . "</FONT>\">");
+					print("<INPUT TYPE=\"checkbox\" NAME=\"delfile[]\" VALUE=\"" . $this->picFileArray[$i] . "\" title=\"åˆ é™¤å›¾ç‰‡ <FONT COLOR=blue>" . $this->picFileArray[$i] . "</FONT>\">");
 
-				print("</CENTER></TD><TD bgcolor=\"#E9E0D3\" height=\"30\"><CENTER> " . $this->picRealSizeWidth . " ¡Á " . $this->picRealSizeHeight . " </CENTER></TD><TD bgcolor=\"#E9E0D3\" height=\"20\"><CENTER>" . $picFileSize . " KB</CENTER></TD></TR></TBODY></TABLE></TD>\n");
+				print("</CENTER></TD><TD bgcolor=\"#E9E0D3\" height=\"30\"><CENTER> " . $this->picRealSizeWidth . " Ã— " . $this->picRealSizeHeight . " </CENTER></TD><TD bgcolor=\"#E9E0D3\" height=\"20\"><CENTER>" . $picFileSize . " KB</CENTER></TD></TR></TBODY></TABLE></TD>\n");
 				
 				if ($this->configEachLineMax == $I)
 				{
@@ -899,7 +899,7 @@ Class neatpic
 				}
 			}
 			print("</TR>\n</TBODY></TABLE>\n");
-			print("<BR><A href=\"#TOP\">·µ»Ø¶¥²¿</A><BR>\n");
+			print("<BR><A href=\"#TOP\">è¿”å›é¡¶éƒ¨</A><BR>\n");
 			print("</center>\n");
 		}
 
@@ -916,9 +916,9 @@ Class neatpic
 
 	function showConfigState()
 	{
-		$this->configOpenGzip == true ? $openGzip = "¿ªÆô" : $openGzip = "¹Ø±Õ";
-		$this->configShowPicSize == true ? $showPicSize = "¿ªÆô" : $showPicSize = "¹Ø±Õ";
-		$this->configWantedPass == true ? $showWantedPass = "¿ªÆô" : $showWantedPass = "¹Ø±Õ";
+		$this->configOpenGzip == true ? $openGzip = "å¼€å¯" : $openGzip = "å…³é—­";
+		$this->configShowPicSize == true ? $showPicSize = "å¼€å¯" : $showPicSize = "å…³é—­";
+		$this->configWantedPass == true ? $showWantedPass = "å¼€å¯" : $showWantedPass = "å…³é—­";
 
 		print("<center>\n");
 		print("<table width=\"1024\">\n");
@@ -927,14 +927,14 @@ Class neatpic
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 
 		/*
-		printf("<CENTER>µ±Ç°ÉèÖÃ:&nbsp;&nbsp;Ñ¹ËõÒ³Ãæ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;ÏÔÊ¾Í¼Æ¬´óĞ¡ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;µÇÂ¼ÈÏÖ¤ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;&nbsp;&nbsp;[ <FONT COLOR=\"blue\">°ïÖúÊÖ²á</FONT> ]\n", $openGzip, $showPicSize, $showWantedPass);
+		printf("<CENTER>å½“å‰è®¾ç½®:&nbsp;&nbsp;å‹ç¼©é¡µé¢ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;æ˜¾ç¤ºå›¾ç‰‡å¤§å° : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;ç™»å½•è®¤è¯ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;&nbsp;&nbsp;[ <FONT COLOR=\"blue\">å¸®åŠ©æ‰‹å†Œ</FONT> ]\n", $openGzip, $showPicSize, $showWantedPass);
 		*/
 		
-		printf("<CENTER>µ±Ç°ÉèÖÃ:&nbsp;&nbsp;Ñ¹ËõÒ³Ãæ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;ÏÔÊ¾Í¼Æ¬´óĞ¡ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;µÇÂ¼ÈÏÖ¤ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;&nbsp;&nbsp;[ <A HREF=\"".$_SERVER['PHP_SELF']."?action=showhelp\" ><FONT COLOR=\"blue\" >NEATPIC °ïÖú</FONT></A> ]\n", $openGzip, $showPicSize, $showWantedPass);
+		printf("<CENTER>å½“å‰è®¾ç½®:&nbsp;&nbsp;å‹ç¼©é¡µé¢ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;æ˜¾ç¤ºå›¾ç‰‡å¤§å° : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;ç™»å½•è®¤è¯ : <FONT COLOR=\"red\"><B>%s</B></FONT>&nbsp;&nbsp;&nbsp;&nbsp;[ <A HREF=\"".$_SERVER['PHP_SELF']."?action=showhelp\" ><FONT COLOR=\"blue\" >NEATPIC å¸®åŠ©</FONT></A> ]\n", $openGzip, $showPicSize, $showWantedPass);
 
 		print("</td>\n");
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">");
-		printf("<CENTER><A HREF=\"%s?action=login&path=%s\"><FONT COLOR=\"red\">¹ÜÀíÔ±µÇÂ¼</FONT></A></CENTER>", $_SERVER['PHP_SELF'], rawurlencode($this->path));
+		printf("<CENTER><A HREF=\"%s?action=login&path=%s\"><FONT COLOR=\"red\">ç®¡ç†å‘˜ç™»å½•</FONT></A></CENTER>", $_SERVER['PHP_SELF'], rawurlencode($this->path));
 		print("</td>\n");
 		print("</tr>\n");
 		print("</tbody>\n");
@@ -962,7 +962,7 @@ Class neatpic
 		print("<tbody>\n");
 		print("<tr>\n");
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
-		print("<CENTER>µÇÂ½ÑéÖ¤</CENTER>");
+		print("<CENTER>ç™»é™†éªŒè¯</CENTER>");
 		print("</td>\n");
 		print("</tr>\n");
 		print("</tbody>\n");
@@ -974,7 +974,7 @@ Class neatpic
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 		print("
 		<CENTER><FORM METHOD=POST ACTION=\"".$_SERVER['PHP_SELF']."?action=loginout\"><BR>\n
-		µÇÂ¼ÃÜÂë : <INPUT TYPE=\"password\" NAME=\"password\"> <INPUT TYPE=\"submit\" VALUE=\"µÇÂ¼\">\n
+		ç™»å½•å¯†ç  : <INPUT TYPE=\"password\" NAME=\"password\"> <INPUT TYPE=\"submit\" VALUE=\"ç™»å½•\">\n
 		<INPUT TYPE=\"hidden\" NAME=\"login\" VALUE=\"" . $_GET['action'] . "\">
 		<INPUT TYPE=\"hidden\" NAME=\"path\" VALUE=\"" . $_GET['path'] . "\">
 		</FORM></CENTER>\n
@@ -1008,22 +1008,22 @@ Class neatpic
 			print("<tbody>\n");
 			print("<tr>\n");
 			print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" width=\"70\">\n");
-			print("<CENTER>¹ÜÀíÑ¡Ïî</CENTER>");
+			print("<CENTER>ç®¡ç†é€‰é¡¹</CENTER>");
 			print("</td>\n");
 			print("<FORM action=\"" . $_SERVER['PHP_SELF'] . "?action=upload\" method=\"POST\" enctype=\"multipart/form-data\">\n");
 			print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" width=\"380\">&nbsp;&nbsp;\n");
 			if (is_writeable($this->path) && $allFileSize < ($this->configAllowSizes * M1) && $this->path != ".")
-				print("<INPUT TYPE=hidden NAME=\"path\" VALUE=\"" . rawurlencode($this->path) . "\"><INPUT style=\"height:20\" TYPE=FILE NAME=\"image\" title=\"ÉÏ´«ÎÄ¼şµ½ <font color=blue>" . $this->nowDirName . "</font> Ä¿Â¼\"> <INPUT TYPE=submit VALUE=\"ÉÏ´«Í¼Æ¬\"> <input type=button value=\"ÅúÁ¿ÉÏ´«\" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->path) . "&action=uploadmore'\" alt=\"ÅúÁ¿ÉÏ´«Í¼Æ¬\">");
+				print("<INPUT TYPE=hidden NAME=\"path\" VALUE=\"" . rawurlencode($this->path) . "\"><INPUT style=\"height:20\" TYPE=FILE NAME=\"image\" title=\"ä¸Šä¼ æ–‡ä»¶åˆ° <font color=blue>" . $this->nowDirName . "</font> ç›®å½•\"> <INPUT TYPE=submit VALUE=\"ä¸Šä¼ å›¾ç‰‡\"> <input type=button value=\"æ‰¹é‡ä¸Šä¼ \" OnClick=\"self.location='" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($this->path) . "&action=uploadmore'\" alt=\"æ‰¹é‡ä¸Šä¼ å›¾ç‰‡\">");
 			else {
-				printf("<FONT COLOR=\"red\"><B>ÎŞ·¨ÉÏ´«Í¼Æ¬ </B></FONT><FONT COLOR=\"red\">Ô­Òò: [ ");
+				printf("<FONT COLOR=\"red\"><B>æ— æ³•ä¸Šä¼ å›¾ç‰‡ </B></FONT><FONT COLOR=\"red\">åŸå› : [ ");
 				if ( $this->path == "./img" ) {
-					printf("imgÎªÏµÍ³Ä¿Â¼£¬²»ÔÊĞíÉÏ´«");
+					printf("imgä¸ºç³»ç»Ÿç›®å½•ï¼Œä¸å…è®¸ä¸Šä¼ ");
 				} else if (!is_writeable($this->path) ) {
-					printf("Ä¿Â¼ <FONT COLOR=\"blue\">%s</FONT> ²»¿ÉĞ´", $this->nowDirName);
+					printf("ç›®å½• <FONT COLOR=\"blue\">%s</FONT> ä¸å¯å†™", $this->nowDirName);
 				} else if ( $allFileSize > ($this->configAllowSizes * M1) ) {
-					printf("ÎÄ¼ş×Ü´óĞ¡³¬³ö±ê×¼");
+					printf("æ–‡ä»¶æ€»å¤§å°è¶…å‡ºæ ‡å‡†");
 				} else if ( $this->path == "." ) {
-					printf("<FONT COLOR=\"blue\">¸ùÄ¿Â¼²»ÔÊĞíÉÏ´«</FONT>£¬Çë½øÈë¸÷·ÖÀàÔÙÉÏ´«");
+					printf("<FONT COLOR=\"blue\">æ ¹ç›®å½•ä¸å…è®¸ä¸Šä¼ </FONT>ï¼Œè¯·è¿›å…¥å„åˆ†ç±»å†ä¸Šä¼ ");
 				}
 				printf(" ]</FONT>");
 				
@@ -1031,7 +1031,7 @@ Class neatpic
 			print("</td>\n");
 			print("</FORM>\n");
 
-			$alt = "Õ¼ÓÃ°Ù·Ö±È£¬×î´ó" . $this->configAllowSizes . "M£¬ÒÑÊ¹ÓÃ" . sprintf("%01.2f",$used_per*100) ."%";
+			$alt = "å ç”¨ç™¾åˆ†æ¯”ï¼Œæœ€å¤§" . $this->configAllowSizes . "Mï¼Œå·²ä½¿ç”¨" . sprintf("%01.2f",$used_per*100) ."%";
 			print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" align=\"center\" alt=\"" . $alt ."\">\n");
 			print("<table width=\"60\" height=\"10\" border=0 cellpadding=0 cellspacing=1 bgcolor=\"red\">\n");
 			print("  <tr>\n");
@@ -1042,7 +1042,7 @@ Class neatpic
 			print("</td>\n");
 			print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 			print("<CENTER>\n");
-			print("<A HREF=\"javascript:document.dfile.submit()\"><FONT COLOR=\"blue\" title=\"É¾³ıÒÑ¾­Ñ¡¶¨ÁËµÄÍ¼Æ¬\">É¾³ıÍ¼Æ¬</FONT></A> | <A HREF=\"".$_SERVER['PHP_SELF']."?action=cfgdirpass&path=" . rawurlencode($this->path) . "\"><FONT COLOR=\"blue\" title=\"Ìí¼Ó/±à¼­ µ±Ç°Ä¿Â¼µÄ·ÃÎÊÃÜÂë\">ÉèÖÃÄ¿Â¼ÃÜÂë</FONT></A> | <A HREF=\"".$_SERVER['PHP_SELF']."?action=loginout&path=" . rawurlencode($this->path) . "\"><B><FONT COLOR=\"red\" title=\"ÍË³ö¹ÜÀíÔ±µÇÂ¼\">ÍË³ö</FONT></B></A>\n");
+			print("<A HREF=\"javascript:document.dfile.submit()\"><FONT COLOR=\"blue\" title=\"åˆ é™¤å·²ç»é€‰å®šäº†çš„å›¾ç‰‡\">åˆ é™¤å›¾ç‰‡</FONT></A> | <A HREF=\"".$_SERVER['PHP_SELF']."?action=cfgdirpass&path=" . rawurlencode($this->path) . "\"><FONT COLOR=\"blue\" title=\"æ·»åŠ /ç¼–è¾‘ å½“å‰ç›®å½•çš„è®¿é—®å¯†ç \">è®¾ç½®ç›®å½•å¯†ç </FONT></A> | <A HREF=\"".$_SERVER['PHP_SELF']."?action=loginout&path=" . rawurlencode($this->path) . "\"><B><FONT COLOR=\"red\" title=\"é€€å‡ºç®¡ç†å‘˜ç™»å½•\">é€€å‡º</FONT></B></A>\n");
 			print("</CENTER>");
 			print("</td>\n");
 			print("</tr>\n");
@@ -1141,11 +1141,11 @@ Class neatpic
 				{
 					$dirPath = rawurldecode($_GET['rmPath']);
 
-					// ·ÀÖ¹Ô½È¨ºÍÉ¾³ıimgÎÄ¼ş¼Ğ
+					// é˜²æ­¢è¶Šæƒå’Œåˆ é™¤imgæ–‡ä»¶å¤¹
 					if (substr($dirPath,0,2) == ".." || substr($dirPath,0,1) == "/" 
 						|| $dirPath == "." || $dirPath == "./img") 
 					{
-						$this->error("ÄãÃ»ÓĞ´Ë²Ù×÷È¨ÏŞ");
+						$this->error("ä½ æ²¡æœ‰æ­¤æ“ä½œæƒé™");
 					} 
 					else 
 					{
@@ -1164,9 +1164,9 @@ Class neatpic
 					print("<tbody>\n");
 					print("<tr>\n");
 					print("<td bgcolor=\"#E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" align=center>\n");
-					print("È·¶¨É¾³ı´ËÎÄ¼ş¼Ğ£¿");
-					print("<INPUT TYPE=\"button\" value=\"  È· ¶¨  \"  onClick=\"self.location='".$_SERVER['PHP_SELF']."?action=rmdirquite&do=yes&thisPath=".rawurlencode($_GET['thisPath'])."&rmPath=".rawurlencode($_GET['rmPath'])."'\">\n");
-					print("<INPUT TYPE=\"button\" value=\"  È¡ Ïû  \"  onclick=\"javascript:history.go(-1)\">\n");
+					print("ç¡®å®šåˆ é™¤æ­¤æ–‡ä»¶å¤¹ï¼Ÿ");
+					print("<INPUT TYPE=\"button\" value=\"  ç¡® å®š  \"  onClick=\"self.location='".$_SERVER['PHP_SELF']."?action=rmdirquite&do=yes&thisPath=".rawurlencode($_GET['thisPath'])."&rmPath=".rawurlencode($_GET['rmPath'])."'\">\n");
+					print("<INPUT TYPE=\"button\" value=\"  å– æ¶ˆ  \"  onclick=\"javascript:history.go(-1)\">\n");
 					print("</td>\n");
 					print("</tr>\n");
 					print("</tbody>\n");
@@ -1228,7 +1228,7 @@ Class neatpic
 
 				$path = rawurldecode($_POST['path']);
 				$dir = rawurldecode($_POST['dirName']);
-				if (file_exists($path . "/" . $dir)) $this->error("ÎÄ¼ş¼ĞÒÑ´æÔÚ");
+				if (file_exists($path . "/" . $dir)) $this->error("æ–‡ä»¶å¤¹å·²å­˜åœ¨");
 				else {
 					mkdir($path . "/" . $dir);
 				}
@@ -1245,12 +1245,12 @@ Class neatpic
 				print("<tbody>\n");
 				print("<tr>\n");
 				print("<td bgcolor=\"#E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" align=center>\n");
-				print("Ìí¼Ó×ÓÄ¿Â¼");
+				print("æ·»åŠ å­ç›®å½•");
 				print("</td>\n");
 				print("</tr>\n");
 				print("<tr>\n");
 				print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\" align=center>\n");
-				print("	<FORM METHOD=POST ACTION=\"".$_SERVER['PHP_SELF']."?action=makedir&do=yes\"><BR>\n	Ä¿Â¼Ãû³Æ : <INPUT TYPE=\"text\" NAME=\"dirName\" title=\" ÇëÊäÈëÃû³Æ \"><BR><BR>		<INPUT TYPE=\"submit\" VALUE=\"      È·     ¶¨       \">\n	<INPUT TYPE=\"hidden\" NAME=\"path\" VALUE=\"" . $_GET['path'] . "\">	</FORM>\n	");		
+				print("	<FORM METHOD=POST ACTION=\"".$_SERVER['PHP_SELF']."?action=makedir&do=yes\"><BR>\n	ç›®å½•åç§° : <INPUT TYPE=\"text\" NAME=\"dirName\" title=\" è¯·è¾“å…¥åç§° \"><BR><BR>		<INPUT TYPE=\"submit\" VALUE=\"      ç¡®     å®š       \">\n	<INPUT TYPE=\"hidden\" NAME=\"path\" VALUE=\"" . $_GET['path'] . "\">	</FORM>\n	");		
 				print("</td>\n");
 				print("</tr>\n");
 				print("</tbody>\n");
@@ -1295,26 +1295,26 @@ Class neatpic
 
 			$imgType = $this->getFileExt($_FILES['image']['name']);
 
-			if (!in_array($imgType, $this->configExt)) $this->error('ÎÄ¼şÀàĞÍ·Ç·¨!');
+			if (!in_array($imgType, $this->configExt)) $this->error('æ–‡ä»¶ç±»å‹éæ³•!');
 
-			if (!copy($_FILES['image']['tmp_name'], $path . "/" . $uploadFile)) $this->error('ÎÄ¼şÉÏ´«·¢Éú´íÎó!');
+			if (!copy($_FILES['image']['tmp_name'], $path . "/" . $uploadFile)) $this->error('æ–‡ä»¶ä¸Šä¼ å‘ç”Ÿé”™è¯¯!');
 
 			print("<center>\n");
 			print("<table width=\"1024\">\n");
 			print("<tbody>\n");
 			print("<tr>\n");
 			print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-			print("<CENTER><FONT COLOR=\"red\"><B>ÎÄ¼şÉÏ´«³É¹¦</B></FONT></CENTER>");
+			print("<CENTER><FONT COLOR=\"red\"><B>æ–‡ä»¶ä¸Šä¼ æˆåŠŸ</B></FONT></CENTER>");
 			print("</td>\n");
 			print("</tr>\n");
 			print("<tr>\n");
 			print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-			printf("<CENTER><BR><FONT COLOR=\"blue\">ÎÄ¼şÃû</FONT> £º <FONT COLOR=\"green\">%s</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">ÎÄ¼ş´óĞ¡</FONT> £º <FONT COLOR=\"green\">%s KB</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">ÎÄ¼şÀàĞÍ</FONT> £º <FONT COLOR=\"green\">%s</FONT><BR><BR><IMG SRC=\"%s%s\" border=1><BR><BR></CENTER>", $uploadFile, sprintf("%0.2f", $_FILES['image']['size'] / 1024), $imgType, $decodePath, rawurlencode($uploadFile));
+			printf("<CENTER><BR><FONT COLOR=\"blue\">æ–‡ä»¶å</FONT> ï¼š <FONT COLOR=\"green\">%s</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">æ–‡ä»¶å¤§å°</FONT> ï¼š <FONT COLOR=\"green\">%s KB</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">æ–‡ä»¶ç±»å‹</FONT> ï¼š <FONT COLOR=\"green\">%s</FONT><BR><BR><IMG SRC=\"%s%s\" border=1><BR><BR></CENTER>", $uploadFile, sprintf("%0.2f", $_FILES['image']['size'] / 1024), $imgType, $decodePath, rawurlencode($uploadFile));
 			print("</td>\n");
 			print("</tr>\n");
 			print("<tr>\n");
 			print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-			printf("<CENTER>[ <A HREF=\"%s%s\" target=\"_blank\">²é¿´ÉÏ´«Í¼Æ¬</A> | <A HREF=\"%s?path=%s\">·µ»Øµ±Ç°Ä¿Â¼</A> ]</CENTER>", $decodePath, rawurlencode($uploadFile), $_SERVER['PHP_SELF'], $_POST['path']);
+			printf("<CENTER>[ <A HREF=\"%s%s\" target=\"_blank\">æŸ¥çœ‹ä¸Šä¼ å›¾ç‰‡</A> | <A HREF=\"%s?path=%s\">è¿”å›å½“å‰ç›®å½•</A> ]</CENTER>", $decodePath, rawurlencode($uploadFile), $_SERVER['PHP_SELF'], $_POST['path']);
 			print("</td>\n");
 			print("</tr>\n");
 			print("</tbody>\n");
@@ -1368,9 +1368,9 @@ Class neatpic
 
 							$imgType = $this->getFileExt($_FILES['images']['name'][$i]);
 
-							if (!in_array($imgType, $this->configExt)) $this->error("ÎÄ¼şÀàĞÍ·Ç·¨! Í¼Æ¬±àºÅ£º[" . ($i + 1) . "]");
+							if (!in_array($imgType, $this->configExt)) $this->error("æ–‡ä»¶ç±»å‹éæ³•! å›¾ç‰‡ç¼–å·ï¼š[" . ($i + 1) . "]");
 
-							if (!copy($_FILES['images']['tmp_name'][$i], $path . "/" . $uploadFile)) $this->error("ÎÄ¼şÉÏ´«·¢Éú´íÎó! Í¼Æ¬±àºÅ£º[" . ($i + 1) . "]");
+							if (!copy($_FILES['images']['tmp_name'][$i], $path . "/" . $uploadFile)) $this->error("æ–‡ä»¶ä¸Šä¼ å‘ç”Ÿé”™è¯¯! å›¾ç‰‡ç¼–å·ï¼š[" . ($i + 1) . "]");
 
 							$uploadFileArray[]	= $uploadFile;
 							$imgTypeArray[]		= $imgType;
@@ -1383,7 +1383,7 @@ Class neatpic
 					print("<tbody>\n");
 					print("<tr>\n");
 					print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-					print("<CENTER><FONT COLOR=\"red\"><B>ÎÄ¼şÅúÁ¿ÉÏ´«³É¹¦</B></FONT></CENTER>");
+					print("<CENTER><FONT COLOR=\"red\"><B>æ–‡ä»¶æ‰¹é‡ä¸Šä¼ æˆåŠŸ</B></FONT></CENTER>");
 					print("</td>\n");
 					print("</tr>\n");
 
@@ -1391,12 +1391,12 @@ Class neatpic
 					{
 						print("<tr>\n");
 						print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-						printf("<CENTER><BR><FONT COLOR=\"blue\">#" . ($i + 1) . " ÎÄ¼şÃû</FONT> £º <FONT COLOR=\"green\">%s</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">ÎÄ¼ş´óĞ¡</FONT> £º <FONT COLOR=\"green\">%s KB</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">ÎÄ¼şÀàĞÍ</FONT> £º <FONT COLOR=\"green\">%s</FONT><BR><BR><IMG SRC=\"%s%s\" border=1><BR><BR></CENTER>", $uploadFileArray[$i], $imgSizeArray[$i], $imgTypeArray[$i], $decodePath, rawurlencode($uploadFileArray[$i]));
+						printf("<CENTER><BR><FONT COLOR=\"blue\">#" . ($i + 1) . " æ–‡ä»¶å</FONT> ï¼š <FONT COLOR=\"green\">%s</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">æ–‡ä»¶å¤§å°</FONT> ï¼š <FONT COLOR=\"green\">%s KB</FONT>&nbsp;&nbsp;<FONT COLOR=\"blue\">æ–‡ä»¶ç±»å‹</FONT> ï¼š <FONT COLOR=\"green\">%s</FONT><BR><BR><IMG SRC=\"%s%s\" border=1><BR><BR></CENTER>", $uploadFileArray[$i], $imgSizeArray[$i], $imgTypeArray[$i], $decodePath, rawurlencode($uploadFileArray[$i]));
 						print("</td>\n");
 						print("</tr>\n");
 						print("<tr>\n");
 						print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-						printf("<CENTER>[ <A HREF=\"%s%s\" target=\"_blank\">²é¿´ÉÏ´«Í¼Æ¬</A> | <A HREF=\"%s?path=%s\">·µ»Øµ±Ç°Ä¿Â¼</A> ]</CENTER>", $decodePath, rawurlencode($uploadFileArray[$i]), $_SERVER['PHP_SELF'], rawurlencode($_GET['path']));
+						printf("<CENTER>[ <A HREF=\"%s%s\" target=\"_blank\">æŸ¥çœ‹ä¸Šä¼ å›¾ç‰‡</A> | <A HREF=\"%s?path=%s\">è¿”å›å½“å‰ç›®å½•</A> ]</CENTER>", $decodePath, rawurlencode($uploadFileArray[$i]), $_SERVER['PHP_SELF'], rawurlencode($_GET['path']));
 						print("</td>\n");
 						print("</tr>\n");
 					}
@@ -1414,7 +1414,7 @@ Class neatpic
 					print("<tbody>\n");
 					print("<tr>\n");
 					print("<td bgcolor=\"#E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
-					print("<CENTER><FONT COLOR=\"red\">ÅúÁ¿ÉÏ´«Í¼Æ¬</FONT></CENTER>");
+					print("<CENTER><FONT COLOR=\"red\">æ‰¹é‡ä¸Šä¼ å›¾ç‰‡</FONT></CENTER>");
 					print("</td>\n");
 					print("</tr>\n");
 					print("<tr>\n");
@@ -1428,14 +1428,14 @@ Class neatpic
 					print("</tr>\n");
 					print("<tr>\n");
 					print("<td bgcolor=\"#E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
-					print("<CENTER><INPUT TYPE=\"submit\" VALUE=\"ÉÏ´«Í¼Æ¬\">&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=\"button\" onclick=\"javascript:history.go(-1)\" VALUE=\"·µ»ØÉÏÒ³\"></CENTER>");
+					print("<CENTER><INPUT TYPE=\"submit\" VALUE=\"ä¸Šä¼ å›¾ç‰‡\">&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=\"button\" onclick=\"javascript:history.go(-1)\" VALUE=\"è¿”å›ä¸Šé¡µ\"></CENTER>");
 					print("</td>\n");
 					print("</FORM>\n");
 					print("</tr>\n");
 					print("<tr>\n");
 					print("<FORM action=\"" . $_SERVER['PHP_SELF'] . "?path=" . rawurlencode($_GET['path']). "&action=uploadmore\" METHOD=\"POST\">\n");
 					print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\" align=center>\n");
-					print("ÖØĞÂÉè¶¨ÒªÅúÁ¿ÉÏ´«µÄÍ¼Æ¬ÊıÁ¿£º&nbsp;&nbsp;ÎÒÒªÒ»´ÎĞÔÉÏ´« <INPUT TYPE=\"text\" NAME=\"uploadnum\" size=\"3\"> ÕÅÍ¼Æ¬&nbsp;&nbsp;<INPUT TYPE=\"submit\" VALUE=\"  ÉèÖÃ  \">\n");
+					print("é‡æ–°è®¾å®šè¦æ‰¹é‡ä¸Šä¼ çš„å›¾ç‰‡æ•°é‡ï¼š&nbsp;&nbsp;æˆ‘è¦ä¸€æ¬¡æ€§ä¸Šä¼  <INPUT TYPE=\"text\" NAME=\"uploadnum\" size=\"3\"> å¼ å›¾ç‰‡&nbsp;&nbsp;<INPUT TYPE=\"submit\" VALUE=\"  è®¾ç½®  \">\n");
 					print("</td>\n");
 					print("</FORM>\n");
 					print("</tr>\n");
@@ -1544,18 +1544,18 @@ Class neatpic
 					list(, $password) = explode('|', chop($password[0]));
 					
 					if (md5($_POST['oldpassword']) != $password)
-						$this->error("¾ÉÃÜÂë²»Æ¥Åä");
+						$this->error("æ—§å¯†ç ä¸åŒ¹é…");
 				}
 
 				if ($_POST['newpassword'] != $_POST['checkpassword'])
-					$this->error("Á½´ÎÃÜÂëÊäÈë²»Æ¥Åä");
+					$this->error("ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸åŒ¹é…");
 
 				if (!$_POST['newpassword'])
 					unlink(rawurldecode($_POST['path']) . "/" . $this->configDirPasswordFile);
 				else
 				{
 					if (!is_writeable(rawurldecode($_POST['path']) . "/"))
-						$this->error("ÒªÉèÖÃ·ÃÎÊµÄÄ¿Â¼²»¿ÉĞ´!ÇëÏÈÉèÖÃÆäÊôĞÔÎª777.");
+						$this->error("è¦è®¾ç½®è®¿é—®çš„ç›®å½•ä¸å¯å†™!è¯·å…ˆè®¾ç½®å…¶å±æ€§ä¸º777.");
 
 					$fp = fopen(rawurldecode($_POST['path']) . "/" . $this->configDirPasswordFile, "w+");
 					fwrite($fp, "<?php die()?>|" . md5($_POST['newpassword']));
@@ -1576,17 +1576,17 @@ Class neatpic
 				print("<tbody>\n");
 				print("<tr>\n");
 				print("<td bgcolor=\"#E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
-				print("<CENTER>Ä¿Â¼·ÃÎÊÃÜÂëÉèÖÃ</CENTER>");
+				print("<CENTER>ç›®å½•è®¿é—®å¯†ç è®¾ç½®</CENTER>");
 				print("</td>\n");
 				print("</tr>\n");
 				print("<tr>\n");
 				print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 				print("
 				<CENTER><FORM METHOD=POST ACTION=\"".$_SERVER['PHP_SELF']."?action=cfgdirpass&do=yes\"><BR>\n
-				¾ÉµÄÃÜÂë : <INPUT TYPE=\"password\" NAME=\"oldpassword\" title=\" Èç¹ûÄ¿Â¼Ô­À´ÓĞÃÜÂë,ÇëÊäÈë¾ÉµÄÃÜÂë \"><BR><BR>
-				ĞÂµÄÃÜÂë : <INPUT TYPE=\"password\" NAME=\"newpassword\" title=\" ÊäÈëĞÂµÄÄ¿Â¼ÃÜÂë \"><BR><BR>
-				È·ÈÏÃÜÂë : <INPUT TYPE=\"password\" NAME=\"checkpassword\" title=\" È·ÈÏĞÂµÄÄ¿Â¼ÃÜÂë \"><BR><BR>
-				<INPUT TYPE=\"submit\" VALUE=\"    Ìí¼Ó/¸üĞÂ ÃÜÂë    \">\n
+				æ—§çš„å¯†ç  : <INPUT TYPE=\"password\" NAME=\"oldpassword\" title=\" å¦‚æœç›®å½•åŸæ¥æœ‰å¯†ç ,è¯·è¾“å…¥æ—§çš„å¯†ç  \"><BR><BR>
+				æ–°çš„å¯†ç  : <INPUT TYPE=\"password\" NAME=\"newpassword\" title=\" è¾“å…¥æ–°çš„ç›®å½•å¯†ç  \"><BR><BR>
+				ç¡®è®¤å¯†ç  : <INPUT TYPE=\"password\" NAME=\"checkpassword\" title=\" ç¡®è®¤æ–°çš„ç›®å½•å¯†ç  \"><BR><BR>
+				<INPUT TYPE=\"submit\" VALUE=\"    æ·»åŠ /æ›´æ–° å¯†ç     \">\n
 				<INPUT TYPE=\"hidden\" NAME=\"path\" VALUE=\"" . $_GET['path'] . "\">
 				</FORM></CENTER>\n
 				");		
@@ -1670,14 +1670,14 @@ Class neatpic
 		print("<tbody>\n");
 		print("<tr>\n");
 		print("<td bgcolor=\"#E9E0D3\" height=\"50\" style=\"border: 1px solid #CCCCCC\">\n");
-		print("<CENTER>¸ÃÄ¿Â¼ÉèÖÃÁËÃÜÂë,ÇëÊäÈëÏàÓ¦µÄ·ÃÎÊÃÜÂë</CENTER>");
+		print("<CENTER>è¯¥ç›®å½•è®¾ç½®äº†å¯†ç ,è¯·è¾“å…¥ç›¸åº”çš„è®¿é—®å¯†ç </CENTER>");
 		print("</td>\n");
 		print("</tr>\n");
 		print("<tr>\n");
 		print("<td bgcolor=\"E9E0D3\" height=\"30\" style=\"border: 1px solid #CCCCCC\">\n");
 		print("
 		<CENTER><FORM METHOD=POST ACTION=\"".$_SERVER['PHP_SELF']."?action=checkdirpass\"><BR>\n
-		·ÃÎÊÃÜÂë : <INPUT TYPE=\"password\" NAME=\"password\"> <INPUT TYPE=\"submit\" VALUE=\"Ìá½»\">\n
+		è®¿é—®å¯†ç  : <INPUT TYPE=\"password\" NAME=\"password\"> <INPUT TYPE=\"submit\" VALUE=\"æäº¤\">\n
 		<INPUT TYPE=\"hidden\" NAME=\"path\" VALUE=\"" . rawurlencode($this->path) . "\">
 		</FORM></CENTER>\n
 		");		
@@ -1725,44 +1725,44 @@ Class neatpic
 			$this->showTitle();
 			$this->ShowJS();
 
-			//ÕâÀïµÄÄÚÈİÊÇÒ»¸öÊı×é,´Ó1¿ªÊ¼...ÎªµÄÊÇ·½±ã±í¸ñÀïµÄĞòºÅ°´Ë³ĞòÅÅÏÂÈ¥
-			//Ö®ËùÒÔ²ÉÓÃÊı¾İ,ÊÇÎªÁË·½±ãÌí¼ÓÆäËü°ïÖú,ÕâÑùµÄ»°,¸ü·½±ãÒÔºóÌí¼Ó
-			//Ïë·¨,¶Ô°ïÖúµÄ$helpContent[2][3]ÄÚÈİ½øĞĞMD5¼ÓÃÜ,È»ºóÔÙ³ÌĞòÀïÑéÖ¤Ò»ÏÂ¾ÍĞĞÁË,
-			//Èç¹ûÓĞÎÊÌâÔòÏÔÊ¾´íÎó»òÆäËü·½Ê½ÈçÄãµÄÄÇ¶ÎDECODEµ½ÄãµÄÍøÒ³µÄ´úÂë,
-			//µ«ÊÇÎÒ¸öÈË²»Ö÷ÕÅ,²»¹ıÎªÁË·ÀÖ¹±ğÈË¸ü¸ÄÎÒÃÇµÄ¸ĞĞ»Ãûµ¥,¿ÉÒÔ¿¼ÂÇÊÔÒ»ÏÂÏÂµÄ~
+			//è¿™é‡Œçš„å†…å®¹æ˜¯ä¸€ä¸ªæ•°ç»„,ä»1å¼€å§‹...ä¸ºçš„æ˜¯æ–¹ä¾¿è¡¨æ ¼é‡Œçš„åºå·æŒ‰é¡ºåºæ’ä¸‹å»
+			//ä¹‹æ‰€ä»¥é‡‡ç”¨æ•°æ®,æ˜¯ä¸ºäº†æ–¹ä¾¿æ·»åŠ å…¶å®ƒå¸®åŠ©,è¿™æ ·çš„è¯,æ›´æ–¹ä¾¿ä»¥åæ·»åŠ 
+			//æƒ³æ³•,å¯¹å¸®åŠ©çš„$helpContent[2][3]å†…å®¹è¿›è¡ŒMD5åŠ å¯†,ç„¶åå†ç¨‹åºé‡ŒéªŒè¯ä¸€ä¸‹å°±è¡Œäº†,
+			//å¦‚æœæœ‰é—®é¢˜åˆ™æ˜¾ç¤ºé”™è¯¯æˆ–å…¶å®ƒæ–¹å¼å¦‚ä½ çš„é‚£æ®µDECODEåˆ°ä½ çš„ç½‘é¡µçš„ä»£ç ,
+			//ä½†æ˜¯æˆ‘ä¸ªäººä¸ä¸»å¼ ,ä¸è¿‡ä¸ºäº†é˜²æ­¢åˆ«äººæ›´æ”¹æˆ‘ä»¬çš„æ„Ÿè°¢åå•,å¯ä»¥è€ƒè™‘è¯•ä¸€ä¸‹ä¸‹çš„~
 
-			$helpContent[1][0] = "NEATPIC (Ä¿Â¼Ö±¶Á°æ) ³ÌĞò¾¿¾¹ÊÇÊ²Ã´£¿";	//Link content
-			$helpContent[1][1] = "µã»÷²é¿´Ê²Ã´ÊÇ NEATPIC (Ä¿Â¼Ö±¶Á°æ) ³ÌĞò";	//Link title
+			$helpContent[1][0] = "NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) ç¨‹åºç©¶ç«Ÿæ˜¯ä»€ä¹ˆï¼Ÿ";	//Link content
+			$helpContent[1][1] = "ç‚¹å‡»æŸ¥çœ‹ä»€ä¹ˆæ˜¯ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) ç¨‹åº";	//Link title
 			$helpContent[1][2] = "whats the neatpic";	//Link's name <a name=''></a>
 			$helpContent[1][3] = "TkVBVFBJQyjEv8K81rG2wbDmKcrHIE5FQVQgU1RVRElPILzMIE5FQVRQSUMguvPNxrP2tcTEv8K81rG2wbDmsb6jrLG%2B18W88r3g1sHJz7XE1K3U8qOssb6zzNDy1rvT0NK7uPbOxLz%2Bo6y%2FycrHyLTKtc%2FWwcu087bgyv3NvMasudzA7bPM0PLTtdPQtcS5psTco6zI587EvP7Jz7Sro6zX08S%2FwrzP1Mq%2Bo6zL9cLUzby1yLXIuabE3KGj";	//help content
 
-			$helpContent[2][0] = "NEATPIC (Ä¿Â¼Ö±¶Á°æ) ¸ĞĞ»Ãûµ¥¡£";	//Link content
-			$helpContent[2][1] = "µã»÷²é¿´°ïÖú¹ı NEATPIC (Ä¿Â¼Ö±¶Á°æ) ÅóÓÑºÍÓÃ»§";	//Link title
+			$helpContent[2][0] = "NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) æ„Ÿè°¢åå•ã€‚";	//Link content
+			$helpContent[2][1] = "ç‚¹å‡»æŸ¥çœ‹å¸®åŠ©è¿‡ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) æœ‹å‹å’Œç”¨æˆ·";	//Link title
 			$helpContent[2][2] = "thanks";	//Link's name <a name=''></a>
 			$helpContent[2][3] = "CQkJs8zQ8s%2Frt6ggOiA8Zm9udCBjb2xvcj1yZWQ%2Bb2xkd29sZjwvZm9udD48YnI%2BDQoJCQm5psTcvajS6SA6IG9sZHdvbGYsIEt2b3JhbiwgV2luZG5ldHMsIEVhc3ksIExhbmQsIMDPsfi%2BxrDJLCDAz87a0bssIMDPue0sIM3BsqbK8ywgZ291a2ksIHjS%2Fmuh73o8YnI%2BDQoJCQmzzNDysuLK1CA6IHjS%2Fmuh73osIG9sZHdvbGYsIHN0YXJkdXN0LCDAz87a0bssIExhbmQsIEt2b3JhbiwgZ291a2kgtci1yLrctuC1xMXz09EuLi4gLi4uPGJyPg0KCQkJ1sbX97PJ1LEgOiB3YWxrZXIsIGdvdWtp";	//help content
 
-			$helpContent[3][0] = "ÎÒĞèÒªÊ¹ÓÃNEATPIC (Ä¿Â¼Ö±¶Á°æ) Âğ£¿";	//Link content
-			$helpContent[3][1] = "µã»÷²é¿´¾¿¾¹ÄÄĞ©ÓÃ»§ĞèÒªÊ¹ÓÃ NEATPIC (Ä¿Â¼Ö±¶Á°æ) ";	//Link title
+			$helpContent[3][0] = "æˆ‘éœ€è¦ä½¿ç”¨NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) å—ï¼Ÿ";	//Link content
+			$helpContent[3][1] = "ç‚¹å‡»æŸ¥çœ‹ç©¶ç«Ÿå“ªäº›ç”¨æˆ·éœ€è¦ä½¿ç”¨ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) ";	//Link title
 			$helpContent[3][2] = "doit";	//Link's name <a name=''></a>
 			$helpContent[3][3] = "yOe5%2B8Tj09DSu7TzttG1xM28xqzQ6NKqus3F89PRw8fSu8bwt9bP7aOstvi21NfUvLrX9s340rO1xMuuxr3T1rK7yse63NPQ0MXQxKO7yOe5%2B7K7z7C538q508NBQ0RTRUXV4sDgv7TNvMjtvP7X1LavyfqzybXEV0VC0rPD5qOsxMfDtMTjvs2%2FydLUyrnTw87Sw8fV4rj2s8zQ8qOsy%2Fy9q7e9sePE472rzbzGrNW5yr64%2BMTjtcTF89PRw8ejrLb4x9K7ub%2FJ0tTJ6Laot8POysPcwuvS1LfA1rnE47XE0rvQqdL%2By73NvMassbvG5Mv708O7p7%2B0tb2how%3D%3D";	//help content
 
-			$helpContent[4][0] = "NEATPIC (Ä¿Â¼Ö±¶Á°æ)ËùĞèÒªµÄÏµÍ³»ù±¾ÅäÖÃ";	//Link content
-			$helpContent[4][1] = "µã»÷²é¿´ NEATPIC (Ä¿Â¼Ö±¶Á°æ) ËùĞèµÄ×îµÍ»ù±¾ÅäÖÃ";	//Link title
+			$helpContent[4][0] = "NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ)æ‰€éœ€è¦çš„ç³»ç»ŸåŸºæœ¬é…ç½®";	//Link content
+			$helpContent[4][1] = "ç‚¹å‡»æŸ¥çœ‹ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) æ‰€éœ€çš„æœ€ä½åŸºæœ¬é…ç½®";	//Link title
 			$helpContent[4][2] = "neatconfig";	//Link's name <a name=''></a>
 			$helpContent[4][3] = "CQkJMS63%2Fs7xxvfWp7PWUEhQILDmsb4gNC4wLjYg0tTJzyAozt7Q6Mr9vt2%2F4tans9YpPGJyPg0KCQkJMi6wssirxKPKvbnYsdU8YnI%2BDQoJCQkzLsjnufvU2mFwYWNoZSAyLlguWM%2FCyrnTwyzW0M7ExL%2FCvCzOxLz%2Bvauyu8Tc1f2zo8%2FUyr6how%3D%3D";	//help content
 
-			$helpContent[5][0] = "NEATPIC (Ä¿Â¼Ö±¶Á°æ) ÓĞÄÄĞ©¹¦ÄÜ£¿";	//Link content
-			$helpContent[5][1] = "µã»÷²é¿´ NEATPIC (Ä¿Â¼Ö±¶Á°æ) ËùÓµÓĞµÄ¹¦ÄÜ";	//Link title
+			$helpContent[5][0] = "NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) æœ‰å“ªäº›åŠŸèƒ½ï¼Ÿ";	//Link content
+			$helpContent[5][1] = "ç‚¹å‡»æŸ¥çœ‹ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) æ‰€æ‹¥æœ‰çš„åŠŸèƒ½";	//Link title
 			$helpContent[5][2] = "how i can";	//Link's name <a name=''></a>
 			$helpContent[5][3] = "CQkJCQkxLtfUtq%2FS1Mv1wtTNvLXEt73Kvc%2FUyr7L%2BdPQzbzGrKOosrvQ6NKqR0S%2F4rXE1qez1qOpOzxCUj4NCgkJCQkJMi6%2FydLUuPm%2B3dDo0qrJ6LaoxL%2FCvLfDzsrD3MLrOzxCUj4NCgkJCQkJMy7Wp7PW1tDOxNfTxL%2FCvMP7OzxCUj4NCgkJCQkJNC7OxLz%2Byc%2B0q6Oo0tHWp7PWtuDOxLz%2Byc%2B0q7mmxNyjqTs8QlI%2BDQoJCQkJCTUuxfrBv8m%2Bs%2F3NvMasOzxCUj4NCgkJCQkJNi7Ev8K8wdCx7c%2FUyr6jrNans9bO3s%2Fe19PEv8K8OzxCUj4NCgkJCQkJNy7Lq8Sjyr2y6b%2B0zbzGrKO61ebKtbe9yr2y6b%2B0us3L9cLUt73KvbLpv7Q7PEJSPg0KCQkJCQk4LsrzserSxravtb3NvMasyc%2B%2FydLUzerV%2B8%2FUyr7NvMasw%2FuzxqOstPPQoaOsuPHKvdLUvLCz37TnoaM8QlI%2BDQoJCQkJCTkuxuTL%2FLv5sb65psTcsrvSu9K7venJ3KOsyOfSs8Pm0bnL9aOst9bSs8%2FUyr6jrMe%2F1sa1x8K8yM%2FWpA%3D%3D";	//help content
 
-			$helpContent[6][0] = "NEATPIC (Ä¿Â¼Ö±¶Á°æ) ÉêÃ÷";	//Link content
-			$helpContent[6][1] = "µã»÷²é¿´ NEATPIC (Ä¿Â¼Ö±¶Á°æ) µÄÉêÃ÷";	//Link title
+			$helpContent[6][0] = "NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) ç”³æ˜";	//Link content
+			$helpContent[6][1] = "ç‚¹å‡»æŸ¥çœ‹ NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) çš„ç”³æ˜";	//Link title
 			$helpContent[6][2] = "copyright";	//Link's name <a name=''></a>
 			$helpContent[6][3] = "TkVBVFBJQyDKx9PJIE5FQVQgU1RVRElPILbAwaK%2Fqreio6zTtdPQuMOzzNDyy%2FnT0LXEsObIqKOsx%2BvKudPD1d%2FX8NbYztLDx7XEsObIqKOs1NrKudPDyrGxo8H0ztLDx7XEsObIqKGj";	//help content
 
-			$helpContent[7][0] = "Jacob À©Õ¹°æËµÃ÷";	//Link content
-			$helpContent[7][1] = "µã»÷²é¿´ Jacob À©Õ¹°æµÄËµÃ÷";	//Link title
+			$helpContent[7][0] = "Jacob æ‰©å±•ç‰ˆè¯´æ˜";	//Link content
+			$helpContent[7][1] = "ç‚¹å‡»æŸ¥çœ‹ Jacob æ‰©å±•ç‰ˆçš„è¯´æ˜";	//Link title
 			$helpContent[7][2] = "jacob";	//Link's name <a name=''></a>
 			$helpContent[7][3] = "SmFjb2Ig1NogTkVBVFBJQyAxLjIuM7Dmyc+9+NDQwcu5psTcwKmz5KOsxNrI3bD8wKjI58/CPGJyPjEuILncwO3AuLzTyc+/1bzk1bzTw7fWzvY8YnI+DQoyLiDU9rzT08O7p8ioz96jrM/e1sbWuLaoxL/CvLe2zqc8YnI+DQozLiDU9rzTv8m9qMGi19PEv8K8o6zJvrP919PEv8K8tcS5psTco6zWp7PW1tDOxDxicj4NCjQuILjEseTBy9K7z8LEv8K8z9TKvr3nw+ajrLe9sePTw7unstnX9zxicj4NCjUuIM/e1sa4+cS/wrzWu8TczqrNvMasudzA7bXEytfSs6OssrvE3MnPtKs8YnI+DQo2LiC01sLUyrXP1ta4tqjTw7unv8nTw7/VvOS089Cho6zU3br2wtTF+sG/PGJyPg0KNy4g1Pa807/Jyei2qMrHt/HP1Mq+zfjVvtb30rO1xMG0vdM=";	//help content
 			
@@ -1770,7 +1770,7 @@ Class neatpic
 				<center>
 				<table width=750><tbody>
 					<tr><td bgcolor='#E9E0D3' height='30' style='border: 1px solid #CCCCCC' align='center'>
-						<font color=red>NEATPIC (Ä¿Â¼Ö±¶Á°æ) °ïÖúÎÄ¼ş</font>
+						<font color=red>NEATPIC (ç›®å½•ç›´è¯»ç‰ˆ) å¸®åŠ©æ–‡ä»¶</font>
 					</td></tr>
 				</tbody></table>
 				<table width=750><tbody>
@@ -1798,7 +1798,7 @@ Class neatpic
 			}			
 			print ("
 					<tr><td bgcolor='#E9E0D3' height='50' style='border: 1px solid #CCCCCC' align='center'>
-						<INPUT TYPE='button' value='·µ»ØÉÏÒ³' onclick='javascript:history.go(-1)'>
+						<INPUT TYPE='button' value='è¿”å›ä¸Šé¡µ' onclick='javascript:history.go(-1)'>
 					</td></tr>
 				</tbody></table>
 				</center>
@@ -1867,7 +1867,7 @@ Class neatpic
 
 error_reporting(0);
 session_start();
-header("content-Type: text/html; charset=GB2312");
+header("content-Type: text/html; charset=utf-8");
 
 	/*
 	+----------------------------------+

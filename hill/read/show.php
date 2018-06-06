@@ -75,7 +75,7 @@ function wdbconvert ($post,$allow=array('pic'=>1,'flash'=>1,'fontsize'=>1)) {
     }
 
 if (!is_file("$datadir/$filename")) {
-    die ("<script>alert(\"ур╡╩╣╫дЗр╙тд╤а╣дндубё║\");history.back();</script>");
+    die ("<script>alert(\"Ф┴╬Д╦█Е┬╟Ф┌╗Х╕│И≤┘Х╞╩Г └Ф√┤Г╚═О╪│\");history.back();</script>");
     }
 
 $file=explode("|hyenpkjvlg|",join("",file("$datadir/$filename")));
@@ -87,7 +87,7 @@ fclose($countfp);
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo "$file[0]"; ?></title>
 <link href="style.css" rel=stylesheet>
 <script language="JavaScript">
@@ -105,24 +105,25 @@ MM_reloadPage(true);
 <center>
 <table border=0 borderColorDark=#ffffff borderColorLight=#405028 cellSpacing=0 width=1024>
 <tr><td align=center>
-<div align=left class=name>║╨<a href="index.php"><?php echo "$name"; ?></a>║╩</div>
+<div align=left class=name>Ц─▌<a href="index.php"><?php echo "$name"; ?></a>Ц─▐</div>
 <table align=center border=0 cellspacing=6 cellpadding=0 width=100%>
 <tr height=35><td class=timu align=middle>
 <b><?php echo "$file[0]"; ?></b></td></tr>
 <tr><td>
-<div align=center>вВуъё╨<font color="red"><?php echo "$file[1]"; ?></font></div>
+<div align=center>Д╫°Х─┘О╪ <font color="red"><?php echo "$file[1]"; ?></font></div>
 <table align=center border=0 cellspacing=0 cellpadding=6 width=100%>
 <tr><td  style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000" class=text>
 <?php echo wdbconvert("$file[4]"); ?>
 </td></tr></table>
 </td></tr></table>
-<a href="javascript:window.external.AddFavorite('<?php echo "$php_self_url?filename=$filename"; ?>','<?php echo "$file[0]"; ?>')">йу╡ь╢кндуб</a>║║║║║║║║║║<a href="javascript:window.print()">╢Рс║╢кндуб</a>║║║║║║║║║║<a href="post.php?filename=<?php echo "$filename"; ?>">╠Ю╪╜╢кндуб</a>║║║║║║║║║║<a href="del.php?filename=<?php echo "$filename"; ?>">и╬ЁЩ╢кндуб</a>
+<a href="javascript:window.external.AddFavorite('<?php echo "$php_self_url?filename=$filename"; ?>','<?php echo "$file[0]"; ?>')">Ф■╤Х≈▐Ф╜╓Ф√┤Г╚═</a>Ц──Ц──Ц──Ц──Ц──<a href="javascript:window.print()">Ф┴⌠Е█╟Ф╜╓Ф√┤Г╚═</a>Ц──Ц──Ц──Ц──Ц──<a href="post.php?filename=<?php echo "$filename"; ?>">Г╪√Х╬▒Ф╜╓Ф√┤Г╚═</a>Ц──Ц──Ц──Ц──Ц──<a href="del.php?filename=<?php echo "$filename"; ?>">Е┬═И≥╓Ф╜╓Ф√┤Г╚═</a>
 </td></tr></table><br>
-<div align="center"><a href="javascript:self.close();">║╨╧ь╠у╢╟©з║╩</a></div><br>
+<div align="center"><a href="javascript:self.close();">Ц─▌Е┘ЁИ≈╜Г╙≈Е▐ёЦ─▐</a></div><br>
 </center>
-<div align="center">Copyright 2002-20012 by ╦ГйФ ╟Фх╗кЫсп</div>
+<div align="center">Copyright 2002-20012 by Е⌠╔Х┬▓ Г┴┬Ф²┐Ф┴─Ф°┴</div>
 </body>
 </html>
+
 
 
 

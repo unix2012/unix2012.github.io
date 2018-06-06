@@ -16,17 +16,17 @@ if (!is_file("$datadir/$filename")) {
     $date=mygetdate();
     $filename=$date[filename];
     $file[0]="";
-    $file[1]="<Î´Öª>";
+    $file[1]="<æœªçŸ¥>";
     $file[2]="$date[date]";
     $file[3]="0";
     $file[4]="";
     $cancel="javascript:self.close()";
-    $type="·¢±íÎÄÕÂ";
+    $type="å‘è¡¨æ–‡ç« ";
     }
 else {
     $file=explode("|hyenpkjvlg|",str_replace("<br>","\n",str_replace("&nbsp;"," ",join("",file("$datadir/$filename")))));
     $cancel="javascript:history.back()";
-    $type="±à¼­ÎÄÕÂ";
+    $type="ç¼–è¾‘æ–‡ç« ";
     }
 
 if ($action=="post") {
@@ -42,13 +42,13 @@ if ($action=="post") {
         echo "<meta http-equiv='Refresh' content='0; URL=show.php?filename=$filename'>";
         }
     else {
-        echo "<script>alert(\"±êÌâ¡¢×÷Õß¡¢ÄÚÈİ²»ÄÜÎª¿Õ»òÕßÃÜÂë´íÎó£¡\");history.back();</script>";
+        echo "<script>alert(\"æ ‡é¢˜ã€ä½œè€…ã€å†…å®¹ä¸èƒ½ä¸ºç©ºæˆ–è€…å¯†ç é”™è¯¯ï¼\");history.back();</script>";
         }
     }
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo "$name--$type"; ?></title>
 <link href="style.css" rel=stylesheet>
 </head>
@@ -59,21 +59,22 @@ if ($action=="post") {
 <tr height=30><td align=center><?php echo "$type"; ?></td></tr>
 <tr><td align=center><br>
 <form method="post" action="post.php?action=post&filename=<?php echo "$filename"; ?>&otherinfo=<?php echo $file[2]."|hyenpkjvlg|".$file[3]; ?>">
-ÎÄÕÂ±êÌâ£º<input type="text" name="title" size="60" style="border:1 dashed #496EB5" value="<?php echo "$file[0]"; ?>"><br>
-ÎÄÕÂ×÷Õß£º<input type="text" name="writer" size="20" style="border: 1 dashed #496EB5" value="<?php echo "$file[1]"; ?>">
-¡¡¡¡¡¡¡¡Ö÷ÈËÃÜÂë£º<input type="password" name="password" size="18" style="border: 1 dashed #496EB5">
+æ–‡ç« æ ‡é¢˜ï¼š<input type="text" name="title" size="60" style="border:1 dashed #496EB5" value="<?php echo "$file[0]"; ?>"><br>
+æ–‡ç« ä½œè€…ï¼š<input type="text" name="writer" size="20" style="border: 1 dashed #496EB5" value="<?php echo "$file[1]"; ?>">
+ã€€ã€€ã€€ã€€ä¸»äººå¯†ç ï¼š<input type="password" name="password" size="18" style="border: 1 dashed #496EB5">
 <br>
-ÎÄÕÂÄÚÈİ£¨±¾³ÌĞòÖ§³Ö<a href="images/wdbcode.htm" target="_blank">WDB</a>´úÂë£©£º
+æ–‡ç« å†…å®¹ï¼ˆæœ¬ç¨‹åºæ”¯æŒ<a href="images/wdbcode.htm" target="_blank">WDB</a>ä»£ç ï¼‰ï¼š
 <br>
 <textarea rows="20" name="content" cols="68" style="border: 1 dashed #496EB5">
 <?php echo "$file[4]"; ?></textarea><br><br>
-<input type="submit" value="Ìá ½»" style="background-color:#FFFFFF; border:0">¡¡¡¡<input type="reset" value="¸´ Ô­" style="background-color:#FFFFFF; border:0">¡¡¡¡<input type="reset" value="È¡ Ïû" style="background-color:#FFFFFF; border:0" onclick="<?php echo "$cancel"; ?>">
+<input type="submit" value="æ äº¤" style="background-color:#FFFFFF; border:0">ã€€ã€€<input type="reset" value="å¤ åŸ" style="background-color:#FFFFFF; border:0">ã€€ã€€<input type="reset" value="å– æ¶ˆ" style="background-color:#FFFFFF; border:0" onclick="<?php echo "$cancel"; ?>">
 </form>
 </td></tr></table>
-<br>Copyright 2002-20012 by ¸çÊæ °æÈ¨ËùÓĞ</div>
+<br>Copyright 2002-20012 by å“¥èˆ’ ç‰ˆæƒæ‰€æœ‰</div>
 </center>
 </body>
 </html>
+
 
 
 

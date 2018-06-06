@@ -1,9 +1,9 @@
 <?php
-//Òª¹ıÂËµÄ·Ç·¨×Ö·û
+//è¦è¿‡æ»¤çš„éæ³•å­—ç¬¦
 $ArrFiltrate=array("union","filename","../");
-//³ö´íºóÒªÌø×ªµÄurl,²»ÌîÔòÄ¬ÈÏÇ°Ò»Ò³
+//å‡ºé”™åè¦è·³è½¬çš„url,ä¸å¡«åˆ™é»˜è®¤å‰ä¸€é¡µ
 $StrGoUrl="";
-//ÊÇ·ñ´æÔÚÊı×éÖĞµÄÖµ
+//æ˜¯å¦å­˜åœ¨æ•°ç»„ä¸­çš„å€¼
 function FunStringExist($StrFiltrate,$ArrFiltrate){
 foreach ($ArrFiltrate as $key=>$value){
 if (eregi($value,$StrFiltrate)){
@@ -12,7 +12,7 @@ return true;
 }
 return false;
 }
-//ºÏ²¢$_POST ºÍ $_GET
+//åˆå¹¶$_POST å’Œ $_GET
 if(function_exists(array_merge)){
 $ArrPostAndGet=array_merge($HTTP_POST_VARS,$HTTP_GET_VARS);
 }else{
@@ -23,10 +23,10 @@ foreach($HTTP_GET_VARS as $key=>$value){
 $ArrPostAndGet[]=$value;
 }
 }
-//ÑéÖ¤¿ªÊ¼
+//éªŒè¯å¼€å§‹
 foreach($ArrPostAndGet as $key=>$value){
 if (FunStringExist($value,$ArrFiltrate)){
-echo "<script language=\"javascript\">alert(\"ÄãÌá½»µÄºÃÏñÊÇ·Ç·¨×Ö·ûßÀ~£¡°´È·¶¨·µ»Ø£¡\");</script>";
+echo "<script language=\"javascript\">alert(\"ä½ æäº¤çš„å¥½åƒæ˜¯éæ³•å­—ç¬¦å‘ƒ~ï¼æŒ‰ç¡®å®šè¿”å›ï¼\");</script>";
 if (empty($StrGoUrl)){
 echo "<script language=\"javascript\">history.go(-1);</script>";
 }else{

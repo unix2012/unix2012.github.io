@@ -2,37 +2,38 @@
 include("cfg.php");
 
 if (!is_file("$datadir/$filename")) {
-    die ("<script>alert(\"ÕÒ²»µ½ÄúÒªÉ¾³ıµÄÎÄÕÂ£¡\");history.back();</script>");
+    die ("<script>alert(\"æ‰¾ä¸åˆ°æ‚¨è¦åˆ é™¤çš„æ–‡ç« ï¼\");history.back();</script>");
     }
 
 if ($action=="del") {
     if ($adminpsd==$password) {
         unlink("$datadir/$filename");
-        echo "<meta http-equiv='Refresh' content='2; URL=javascript:self.close()'><p align=\"center\">ÒÑ³É¹¦É¾³ıÁË£¡";
+        echo "<meta http-equiv='Refresh' content='2; URL=javascript:self.close()'><p align=\"center\">å·²æˆåŠŸåˆ é™¤äº†ï¼";
         }
     else {
-        die ("<script>alert(\"ÃÜÂë´íÎó£¡\");history.back();</script>");
+        die ("<script>alert(\"å¯†ç é”™è¯¯ï¼\");history.back();</script>");
         }
     }
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title><?php echo "$name--É¾³ıÎÄÕÂ"; ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><?php echo "$name--åˆ é™¤æ–‡ç« "; ?></title>
 <link href="style.css" rel=stylesheet>
 </head>
 <body background="images/bg.jpg">
 <center>
   <p align="center">&nbsp;</p>
 <form action="del.php?action=del&filename=<?php echo "$filename"; ?>" method="post">
-<div style="font-size:9pt">ÇëÊäÈë¹ÜÀíÃÜÂë: </div><br>
+<div style="font-size:9pt">è¯·è¾“å…¥ç®¡ç†å¯†ç : </div><br>
 <input name="password" size="20" type="password" style="border: 1 dashed #405282"><br>
-<input type="submit" value="É¾ ³ı"> <input type="reset" value="È¡ Ïû" onclick="javascript:history.back();">
+<input type="submit" value="åˆ  é™¤"> <input type="reset" value="å– æ¶ˆ" onclick="javascript:history.back();">
 </form>
-<div align="center">Copyright 2002-20012 by ¸çÊæ °æÈ¨ËùÓĞ</div>
+<div align="center">Copyright 2002-20012 by å“¥èˆ’ ç‰ˆæƒæ‰€æœ‰</div>
 </center>
 </body>
 </html>
+
 
 
 

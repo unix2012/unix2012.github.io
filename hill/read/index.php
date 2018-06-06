@@ -20,7 +20,7 @@ sort($oldlist);
 if ($keyword=="") {
         $list=$oldlist;
         $posts=count($list);
-        $firsttable="¹²ÓĞ<font color=\"red\">$posts</font>ÆªÎÄÕÂ&nbsp;&nbsp;&nbsp;<a href=\"post.php\" target=\"_blank\">·¢±í</a>&nbsp;&nbsp;&nbsp;<a href=\"javascript:window.external.AddFavorite('$php_self_url','$name')\">ÊÕ²Ø</a>&nbsp;&nbsp;&nbsp;";
+        $firsttable="å…±æœ‰<font color=\"red\">$posts</font>ç¯‡æ–‡ç« &nbsp;&nbsp;&nbsp;<a href=\"post.php\" target=\"_blank\">å‘è¡¨</a>&nbsp;&nbsp;&nbsp;<a href=\"javascript:window.external.AddFavorite('$php_self_url','$name')\">æ”¶è—</a>&nbsp;&nbsp;&nbsp;";
         }
 else {
         $keyword=htmlspecialchars("$keyword");
@@ -36,12 +36,12 @@ else {
                         }
                 }
         $posts=count($list);
-        $firsttable="ÕÒµ½<font color=\"red\">$posts</font>ÆªÎÄÕÂ&nbsp;&nbsp;&nbsp;<a href=\"index.php\">·µ»ØÊ×Ò³</a>&nbsp;&nbsp;&nbsp;";
+        $firsttable="æ‰¾åˆ°<font color=\"red\">$posts</font>ç¯‡æ–‡ç« &nbsp;&nbsp;&nbsp;<a href=\"index.php\">è¿”å›é¦–é¡µ</a>&nbsp;&nbsp;&nbsp;";
         }
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo "$name"; ?></title>
 <link href="style.css" rel=stylesheet>
 <script language="JavaScript">
@@ -68,17 +68,17 @@ MM_reloadPage(true);
 <center>
 <table border=0 cellspacing=0 width=1024 bordercolorlight=#405028 bordercolordark=#FFFFFF>
 <tr>
-<td width="53%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">ÎÄÕÂ±êÌâ</td>
-<td width="15%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">×÷Õß</td>
-<td width="25%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">·¢±íÈÕÆÚ</td>
-<td width="7%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">ÈËÆø</td>
+<td width="53%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">æ–‡ç« æ ‡é¢˜</td>
+<td width="15%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">ä½œè€…</td>
+<td width="25%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">å‘è¡¨æ—¥æœŸ</td>
+<td width="7%" align="center" style="border-top:1px solid #ff0000;border-bottom:1px solid #ff0000">äººæ°”</td>
 </tr>
 <?php
 if (!isset($page)) { $page=1; }
 for ($i=$posts-($number+1)*($page-1);$i>$posts-($number+1)*$page;$i=$i-1) {
  if ($list[$i]!="") {
   $file=explode("|hyenpkjvlg|",join("",file("$datadir/".$list[$i])));
-echo "<tr>\n<td>&nbsp;¡ù&nbsp;<a href=\"show.php?filename=$list[$i]\" target=\"_blank\">$file[0]</a></td>\n
+echo "<tr>\n<td>&nbsp;â€»&nbsp;<a href=\"show.php?filename=$list[$i]\" target=\"_blank\">$file[0]</a></td>\n
   <td align=\"center\">$file[1]</td>\n
    <td align=\"center\">$file[2]</td>\n
   <td align=\"center\">$file[3]</td>\n</tr>\n";
@@ -97,7 +97,7 @@ echo "<tr>\n<td>&nbsp;¡ù&nbsp;<a href=\"show.php?filename=$list[$i]\" target=\"_
 <table><tr><td><input type="text" name="keyword" style="border: 1 dashed #405028"></td>
 <td><input type="image" src="images/search.gif"></td></tr></table>
 </form>
-<div align="center">Copyright 2002-20012 by ¸çÊæ °æÈ¨ËùÓĞ</div>
+<div align="center">Copyright 2002-20012 by å“¥èˆ’ ç‰ˆæƒæ‰€æœ‰</div>
 </center>
 </body>
 </html>
