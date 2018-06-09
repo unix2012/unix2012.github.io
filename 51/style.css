@@ -1,0 +1,14 @@
+body {background-color:#E9E0D3;font-size:12px;font-family:宋体;line-height:160%}
+td {font-family:宋体;color:black;	line-height:150%;font-size:10.5pt}
+a:link {color:#000000;text-decoration:none}
+a:visited {color:#000000;text-decoration:none}
+a:hover {color:#000000;text-decoration:underline;color:red}
+a:active{color:#000000;text-decoration:none}
+.hr {width:1px}
+.biaoti{background-color:#e9e0d3}
+.text{background-color:#d8ebeb}
+.txt{background-color:#feb069}
+.tm{background-color:#cdcd00}
+.fox{background-color:#CDBE70}
+.shop{background-color:#cc7d68}
+.simple{background-color:#C8E3FF}
